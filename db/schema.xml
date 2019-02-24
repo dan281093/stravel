@@ -41,86 +41,122 @@
     <type label="Inet CIDR Addr" length="0" sql="CIDR" quote="'"/>
     <type label="Geometry" length="0" sql="GEOMETRY" quote="'"/>
   </group>
-</datatypes><table x="277" y="122" name="user">
+</datatypes><table x="58" y="293" name="users">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="first_name" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="last_name" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="email" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="description" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="avatar" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="birth_date" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="824" y="98" name="activities">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="name" null="1" autoincrement="0">
 <datatype>VARCHAR</datatype>
 <default>NULL</default></row>
-<row name="address" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="405" y="28" name="attendees">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="email" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
+<row name="user_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="users" row="id" />
+</row>
+<row name="event_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="events" row="id" />
+</row>
+<row name="new field" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="expertise" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="is_local?" null="1" autoincrement="0">
-<datatype>BOOLEAN</datatype>
+<row name="status" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="922" y="109" name="service">
+<table x="552" y="246" name="events">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="host_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="users" row="id" />
+</row>
+<row name="activity_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="activities" row="id" />
+</row>
+<row name="title" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="description" null="1" autoincrement="0">
+<datatype>TEXT</datatype>
+<default>NULL</default></row>
+<row name="location" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="latitude" null="1" autoincrement="0">
+<datatype>DECIMAL</datatype>
+<default>NULL</default></row>
+<row name="longitude" null="1" autoincrement="0">
+<datatype>DECIMAL</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="387" y="503" name="user_interest">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="user_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="users" row="id" />
+</row>
+<row name="interest_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="interests" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="904" y="376" name="interests">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="name" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
 <default>NULL</default></row>
 <row name="category" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="description" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="local_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="user" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="560" y="274" name="booking">
-<row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="time" null="1" autoincrement="0">
-<datatype>TIME</datatype>
-<default>NULL</default></row>
-<row name="price" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="description" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="client_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="user" row="id" />
-</row>
-<row name="service_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="service" row="id" />
-</row>
-<row name="status" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="953" y="395" name="review">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="description" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="booking_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="booking" row="id" />
-</row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
