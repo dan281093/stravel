@@ -1,5 +1,8 @@
 {
   "name": "stravel",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "3.4.0",
+    "jquery": "^3.3.1"
+  }
 }
