@@ -1,3 +1,4 @@
 class Attendee < ApplicationRecord
-  belongs_to :user
+  has_many :users
+  belongs_to :events
 end
