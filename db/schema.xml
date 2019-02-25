@@ -90,9 +90,6 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="events" row="id" />
 </row>
-<row name="new field" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
 <row name="status" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -117,9 +114,6 @@
 <default>NULL</default></row>
 <row name="description" null="1" autoincrement="0">
 <datatype>TEXT</datatype>
-<default>NULL</default></row>
-<row name="location" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
 <default>NULL</default></row>
 <row name="latitude" null="1" autoincrement="0">
 <datatype>DECIMAL</datatype>
