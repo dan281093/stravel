@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_25_084700) do
+ActiveRecord::Schema.define(version: 2019_02_25_093521) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 2019_02_25_084700) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "event_id"
+    t.index ["event_id"], name: "index_attendees_on_event_id"
     t.index ["user_id"], name: "index_attendees_on_user_id"
   end
 
@@ -53,7 +55,9 @@ ActiveRecord::Schema.define(version: 2019_02_25_084700) do
     t.bigint "interest_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
     t.index ["interest_id"], name: "index_user_interests_on_interest_id"
+    t.index ["user_id"], name: "index_user_interests_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -61,13 +65,15 @@ ActiveRecord::Schema.define(version: 2019_02_25_084700) do
     t.string "last_name"
     t.string "email"
     t.text "description"
-    t.datetime "birth_date"
+    t.date "birth_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "attendees", "events"
   add_foreign_key "attendees", "users"
   add_foreign_key "events", "activities"
   add_foreign_key "events", "users"
   add_foreign_key "user_interests", "interests"
+  add_foreign_key "user_interests", "users"
 end
