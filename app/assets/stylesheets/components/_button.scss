@@ -1,0 +1,45 @@
+.button-event {
+  background-color: #ee965b; /* Green */
+ border: none;
+ color: white;
+ padding: 15px 32px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+ border-radius: 15px;
+ transition: 0.6s ease;
+}
+
+.button-event:hover{
+  background-color: #c75c41;
+}
+
+
+.cards {
+  background-color: #ecc571; /* Green */
+ border: none;
+ color: white;
+ height: 25vh;
+ width: 20vw;
+ min-height: 50px;
+ min-width: 125px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+ border-radius: 15px;
+ transition: 0.6s ease;
+ flex: 0 1;
+  margin: 15px 10px;
+}
+.cards:hover{
+  background-color:#d0ac5e;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
