@@ -1,0 +1,23 @@
+.container-couli{
+  height: 100vh;
+  background-image: url("images/image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title{
+color: white;
+}
+
+.catch-phrase{
+color: white;
+margin-top: 20vh;
+}
+
+.container-couli img{
+filter: blur(4px);
+}
+
+.infos{
+  color: white;
+}
