@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+=======
+// interests
+.cards {
+  background-color: #ecc571; /* Beige */
+  border: none;
+  color: white;
+  height: 25vh;
+  width: 20vw;
+  min-height: 50px;
+  min-width: 125px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 15px;
+  transition: 0.6s ease;
+  flex: 0 1;
+  margin: 15px 10px;
+  border-style: solid;
+  border-color: white;
+
+}
+.cards:hover {
+  background-color:#d0ac5e;
+  border-style: none;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+>>>>>>> 1bd6e9e18115e058136fbd61e7b37b1765633df5
 // Card with avatar
 .card-user-pic {
   display: flex;
@@ -17,5 +53,8 @@
   width: 15%;
   border-radius: 60%;
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 1bd6e9e18115e058136fbd61e7b37b1765633df5

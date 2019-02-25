@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 .button {
   background-color: #4CAF50; /* Green */
   border: none;
@@ -11,17 +9,6 @@
   font-size: 16px;
   border-radius: 15px;
 
-button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 15px;
-=======
 .button-event {
   background-color: #ee965b; /* Green */
  border: none;
@@ -39,26 +26,23 @@ button {
   background-color: #c75c41;
 }
 
-
-.cards {
-  background-color: #ecc571; /* Green */
- border: none;
+.button-create{
+  background-color: #2BD67C;
+   border: none;
  color: white;
- height: 25vh;
- width: 20vw;
- min-height: 50px;
- min-width: 125px;
+ padding: 30px 32px;
  text-align: center;
  text-decoration: none;
  display: inline-block;
  font-size: 16px;
  border-radius: 15px;
- transition: 0.6s ease;
- flex: 0 1;
-  margin: 15px 10px;
+ transition: 0.4s ease;
+ min-width: 150px;
 }
-.cards:hover{
-  background-color:#d0ac5e;
+
+
+.button-create:hover{
+  background-color: #2BD68F;
 }
 
 .wrapper{
@@ -66,5 +50,17 @@ button {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
->>>>>>> a24f23ef0b19b4820350b981b4382f88abe00bea
+
+.button-join{
+  background-color: #2D8BE2;
+   border: none;
+ color: white;
+ padding: 30px 32px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+ border-radius: 15px;
+ transition: 0.4s ease;
+  min-width: 150px;
 }
