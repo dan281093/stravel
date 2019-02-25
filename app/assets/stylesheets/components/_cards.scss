@@ -1,0 +1,21 @@
+// Card with avatar
+.card-user-pic {
+  display: flex;
+  justify-content: space-between;
+  background-color: blue;
+  align-items: center;
+  width:150px;
+  height:25%;
+  image-size:50%;
+  float: right;
+  font-size: 10px;
+  padding-left:1%;
+  padding-right:1%;
+  padding-top: .05%;
+}
+.pic {
+  width: 15%;
+  border-radius: 60%;
+}
+
+
