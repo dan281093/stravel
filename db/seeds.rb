@@ -5,6 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "destroying all user interests"
+UserInterest.destroy_all
+
+puts "destroying all interests!!!"
+Interest.destroy_all
 
 puts "destroying all events!!!"
 ## Clear all services
@@ -78,13 +83,17 @@ user_interest = [
 puts 'I am creating user interests now!'
 UserInterest.create!(user_interest)
 
-adam = UserInterest.find_by(user: adam)
-don = UserInterest.find_by(user: don)
-eve = UserInterest.find_by(user: eve)
+interest1 = UserInterest.find_by(user: adam)
+interest2 = UserInterest.find_by(user: don)
+interest3 = UserInterest.find_by(user: eve)
 
 upscale = Interest.find_by(name: 'Upscale')
 live_bars = Interest.find_by(name: 'Live Bars')
 electro = Interest.find_by(name: 'Electro')
 festivals = Interest.find_by(name: 'Festival')
+
+puts 'I am creating events now!'
+Event.create!(title: 'Going Out!', description: 'Have fun', user_id: adam.id, host: adam, activity: bar)
+event1 = Event.find_by(title: 'Going Out!')
 
 puts 'done making seeds!'
