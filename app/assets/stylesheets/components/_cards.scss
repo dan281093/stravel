@@ -1,29 +1,52 @@
+// interests
 .cards {
-   background-color: #ecc571; /* Beige */
-   border: none;
-   color: white;
-   height: 25vh;
-   width: 20vw;
-   min-height: 50px;
-   min-width: 125px;
-   text-align: center;
-   text-decoration: none;
-   display: inline-block;
-   font-size: 16px;
-   border-radius: 15px;
-   transition: 0.6s ease;
-   flex: 0 1;
-   margin: 15px 10px;
-   border-style: solid;
-   border-color: white;
+  background-color: #ecc571; /* Beige */
+  border: none;
+  color: white;
+  height: 25vh;
+  width: 20vw;
+  min-height: 50px;
+  min-width: 125px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 15px;
+  transition: 0.6s ease;
+  flex: 0 1;
+  margin: 15px 10px;
+  border-style: solid;
+  border-color: white;
+
 }
-.cards:hover{
+.cards:hover {
   background-color:#d0ac5e;
   border-style: none;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+
+// Card with avatar
+.card-user-pic {
+  display: flex;
+  justify-content: space-between;
+  background-color: blue;
+  align-items: center;
+  width:150px;
+  height:25%;
+  image-size:50%;
+  float: right;
+  font-size: 10px;
+  padding-left:1%;
+  padding-right:1%;
+  padding-top: .05%;
+}
+.pic {
+  width: 15%;
+  border-radius: 60%;
 }
