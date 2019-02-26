@@ -10,6 +10,7 @@ class EventsController < ApplicationController
   end
 
   def show
+    @event = Event.find(params[:id])
   end
 
   def checkout
@@ -23,7 +24,6 @@ class EventsController < ApplicationController
       render :new
     end
   end
-
 
   private
 
