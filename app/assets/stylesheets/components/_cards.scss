@@ -29,23 +29,23 @@
   justify-content: space-between;
   align-items: center;
 }
+.card-event-show1 {
 
+  border: 2px groove rgba(28,110,164,0.18);
+  margin: 15px;
+  padding: 23px 115px;
+
+}
 // Card with avatar
 .card-user-pic {
   display: flex;
   justify-content: space-between;
-  background-color: blue;
-  align-items: center;
-  width:150px;
-  height:25%;
-  image-size:50%;
-  float: right;
-  font-size: 10px;
-  padding-left:1%;
-  padding-right:1%;
-  padding-top: .05%;
+  // align-items: center;
+
 }
 .pic {
   width: 15%;
   border-radius: 60%;
+  position: absolute;
+  left: 35px;
 }
