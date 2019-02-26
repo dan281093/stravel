@@ -16,18 +16,23 @@
 ></div>
 
 <div class="container">
-  <div class="event-title">
-    <%= @event.title %> <i aria-hidden="true" class="fas fa-trash"></i>
-</div>
+  <% @events.each do |event| %>
+    <div class="event-title">
+      <%= event.title %>
+ <%= link_to event_path(@event), method: :delete , class: "fas fa-trash"  %>
 
-<div class="container">
-  <div class="event-title">
-    <%= @event.title %> <i aria-hidden="true" class="fas fa-trash"></i>
-</div>
+    </div>
+  <% end %>
 
-<div class="container">
   <div class="event-title">
-    <%= @event.title %> <i aria-hidden="true" class="fas fa-trash"></i>
+    <%= @event.title %> <%= link_to "Delete this event", event_path(@event), method: :delete , class: "fas fa-trash"  %>
+  </div>
+
+
+
+  <div class="event-title">
+    <%= @event.title %> <%= link_to event(@event), method: :delete , class: "fas fa-trash"  %>
+  </div>
 </div>
 <button> Add More Events </button>
 <button> Add  </button>
