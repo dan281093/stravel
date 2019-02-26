@@ -1,2 +1,31 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<div class="LOGO">
+  <h1>STRAVEL</h1>
+</div>
+
+
+<div class="card-event-show">
+  <div class="card-event-infos">
+    <h2><%= @event.title %></h2>
+  </div>
+</div>
+
+<div class="card-event-show">
+  <div class="card-event-infos">
+    <p><%= @event.address %></p>
+  </div>
+</div>
+
+<div class="card-user-pic">
+  <img src="..." class="card-user-avatar">
+  <div class="card-user-infos">
+    <h2><%= @event.host.first_name %></h2>
+  </div>
+</div>
+
+<div class="card-event-show">
+  <div class="card-event-infos">
+    <p><% @event.description %></p>
+  </div>
+</div>
+
+<button> Add </button>

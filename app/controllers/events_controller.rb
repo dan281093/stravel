@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   def index
     @events = Event.where.not(latitude: nil, longitude: nil)
+
     @markers = @events.map do |event|
       {
         lng: event.longitude,
@@ -10,20 +11,21 @@ class EventsController < ApplicationController
   end
 
   def show
+    @event = Event.find(params[:id])
+  end
+
+  def create
+    @event = Event.create(host: current_user)
+    redirect_to event_design_path(Wicked::FIRST_STEP, event_id: @event.id)
   end
 
   def checkout
   end
 
-  def create
-    @events = Event.new(events_params)
-    if @event.save
-      redirect_to events_path
-    else
-      render :new
-    end
+  def search
+    # FORM TO PICK ACTIVITIES
+    # SUBMITS TO THE INDEX
   end
-
 
   private
 

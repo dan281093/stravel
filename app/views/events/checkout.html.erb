@@ -1,2 +1,38 @@
 <h1>Events#checkout</h1>
 <p>Find me in app/views/events/checkout.html.erb</p>
+
+<div class="container">
+<div class="LOGO">
+  <h1>STRAVEL</h1>
+</div>
+</div>
+
+<div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
+
+<div class="container">
+  <% @events.each do |event| %>
+    <div class="event-title">
+      <%= event.title %>
+ <%= link_to event_path(@event), method: :delete , class: "fas fa-trash"  %>
+
+    </div>
+  <% end %>
+
+  <div class="event-title">
+    <%= @event.title %> <%= link_to "Delete this event", event_path(@event), method: :delete , class: "fas fa-trash"  %>
+  </div>
+
+
+
+  <div class="event-title">
+    <%= @event.title %> <%= link_to event(@event), method: :delete , class: "fas fa-trash"  %>
+  </div>
+</div>
+<button> Add More Events </button>
+<button> Add  </button>
