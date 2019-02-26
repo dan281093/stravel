@@ -3,7 +3,7 @@
   background-color: #ecc571; /* Beige */
   border: none;
   color: white;
-  height: 25vh;
+  height: 15vh;
   width: 20vw;
   min-height: 50px;
   min-width: 125px;
@@ -48,4 +48,10 @@
 .pic {
   width: 15%;
   border-radius: 60%;
+}
+
+.cards img {
+    position: relative;
+    height: 30%;
+    margin-top: 5px;
 }

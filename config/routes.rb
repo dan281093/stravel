@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get 'choose', to: 'pages#choose'
+  get 'interest', to: 'pages#interest'
   get 'join_activities', to: 'pages#join_activities'
+
 
   resources :attendees, only: [:index, :show]
   resources :dashboards, only: [:index]
