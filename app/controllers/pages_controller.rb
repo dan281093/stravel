@@ -4,4 +4,7 @@ class PagesController < ApplicationController
 
   def choose
   end
+
+  def join_activities
+  end
 end
