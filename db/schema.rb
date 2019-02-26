@@ -36,13 +36,13 @@ ActiveRecord::Schema.define(version: 2019_02_25_153707) do
     t.text "description"
     t.float "latitude"
     t.float "longitude"
-    t.bigint "user_id"
+    t.integer "host_id"
     t.bigint "activity_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "address"
     t.index ["activity_id"], name: "index_events_on_activity_id"
-    t.index ["user_id"], name: "index_events_on_user_id"
+    t.index ["host_id"], name: "index_events_on_host_id"
   end
 
   create_table "interests", force: :cascade do |t|
@@ -80,7 +80,6 @@ ActiveRecord::Schema.define(version: 2019_02_25_153707) do
   add_foreign_key "attendees", "events"
   add_foreign_key "attendees", "users"
   add_foreign_key "events", "activities"
-  add_foreign_key "events", "users"
   add_foreign_key "user_interests", "interests"
   add_foreign_key "user_interests", "users"
 end
