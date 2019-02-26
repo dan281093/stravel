@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get 'choose', to: 'pages#choose'
+  get 'join-activities', to: 'pages#join-activities'
 
   resources :attendees, only: [:index, :show]
   resources :dashboards, only: [:index]
@@ -10,6 +11,5 @@ Rails.application.routes.draw do
   resources :events do
     resources :attendees, only: [:index, :show], controller: 'events/attendees'
   end
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :test
+  resources :after_signup
 end
