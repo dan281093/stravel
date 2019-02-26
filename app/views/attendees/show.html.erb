@@ -1,2 +1,23 @@
 <h1>Attendees#show</h1>
 <p>Find me in app/views/attendees/show.html.erb</p>
+
+<div class="container">
+  <div class="LOGO">
+    <h1>STRAVEL</h1>
+  </div>
+</div>
+
+<%= cl_image_tag("IMAGE_WITH_FACE_ID",
+      width: 150, height: 150, crop: :thumb, gravity: :face) %>
+
+<div class="container">
+  <div class="name">
+    <h1><%= @attendee.user_id %></h1>
+  </div>
+</div>
+
+      <div class="container">
+<div class="name">
+  <p><%= @attendee.user_id.description %></p>
+</div>
+</div>
