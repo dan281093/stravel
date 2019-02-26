@@ -8,62 +8,64 @@
   display: inline-block;
   font-size: 16px;
   border-radius: 15px;
+}
 
 .button-event {
   background-color: #ee965b; /* Green */
- border: none;
- color: white;
- padding: 15px 32px;
- text-align: center;
- text-decoration: none;
- display: inline-block;
- font-size: 16px;
- border-radius: 15px;
- transition: 0.6s ease;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 15px;
+  transition: 0.6s ease;
 }
 
 .button-event:hover{
   background-color: #c75c41;
 }
 
-.button-create{
+.button-create {
   background-color: #2BD67C;
-   border: none;
- color: white;
- padding: 30px 32px;
- text-align: center;
- text-decoration: none;
- display: inline-block;
- font-size: 16px;
- border-radius: 15px;
- transition: 0.4s ease;
- min-width: 150px;
+  border: none;
+  color: white;
+  padding: 30px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 15px;
+  transition: 0.4s ease;
+  min-width: 150px;
 }
 
 
-.button-create:hover{
+.button-create:hover {
   background-color: #2BD68F;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+}
 
-.button-join{
-  background-color: #2D8BE2;
-   border: none;
- color: white;
- padding: 30px 32px;
- text-align: center;
- text-decoration: none;
- display: inline-block;
- font-size: 16px;
- border-radius: 15px;
- transition: 0.4s ease;
-  min-width: 150px;
-}
-.small-margin{
-  margin-top: 30px;
-}
+  .button-join {
+    background-color: #2D8BE2;
+    border: none;
+    color: white;
+    padding: 30px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;
+    transition: 0.4s ease;
+    min-width: 150px;
+  }
+  .small-margin {
+    margin-top: 30px;
+  }

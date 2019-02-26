@@ -93,7 +93,7 @@ electro = Interest.find_by(name: 'Electro')
 festivals = Interest.find_by(name: 'Festival')
 
 puts 'I am creating events now!'
-Event.create!(title: 'Going Out!', description: 'Have fun', user_id: adam.id, host: adam, activity: bar)
+Event.create!(title: 'Going Out!', description: 'Have fun', host: adam, activity: bar)
 event1 = Event.find_by(title: 'Going Out!')
 
 puts 'done making seeds!'
