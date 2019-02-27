@@ -56,17 +56,23 @@ don = User.find_by(first_name: "Donald")
 eve = User.find_by(first_name: "Eve")
 
 activities = [
-  { name: 'Bar' },
   { name: 'Party' },
-  { name: 'Shopping' }
+  { name: 'Bar' },
+  { name: 'Beach' },
+  { name: 'Lounge' },
+  { name: 'Shopping' },
+  { name: 'Cinema' }
 ]
 
 puts 'I am creating activities now!'
   Activity.create!(activities)
 
-bar = Activity.find_by(name: 'Bar')
 party = Activity.find_by(name: 'Party')
+bar = Activity.find_by(name: 'Bar')
+beach = Activity.find_by(name: 'Beach')
+lounge = Activity.find_by(name: 'Lounge')
 shopping = Activity.find_by(name: 'Shopping')
+cinema = Activity.find_by(name: 'Cinema')
 
 interests = [
   { name: 'Upscale', category: 'Bar' },
