@@ -17,9 +17,7 @@
             <%= event.title %>
           </div>
           <%= link_to events_path do %>
-
-            <a class=" fas fa-trash card-link" href="https://www.google.com" ></a>
-
+            <i class="fa fa-trash card-link"></i>
           <% end %>
         </div>
       <% end %>
@@ -29,17 +27,25 @@
 
   <div class="col-xs-12 card-center">
     <h3 class="title-light-big">As a host</h3>
-    <div class="card-dashboard">
-    <% @hosting_events.each do |event| %>
-      <div class="event-name">
-        <%= event.title %>
-      </div>
-       <i aria-hidden="true" class="fas fa-trash p-right"></i>
-    <% end %>
+      <% @hosting_events.each do |event| %>
+        <%= link_to event_path(event) do %>
+        <div class="card-dashboard">
+          <div class="event-name">
+            <%= event.title %>
+          </div>
+          <%= link_to events_path do %>
+            <i class="fa fa-trash card-link"></i>
+          <% end %>
+        </div>
+        <% end %>
+      <% end %>
   </div>
-</div>
 
 
-<div class="text-center">
-<button class="start-again-button"> Start Again </button>
+  <div class="text-center">
+    <button class="start-again-button">
+      <%= link_to events_path do %> Start Again
+    </button>
+      <% end %>
+  </div>
 </div>
