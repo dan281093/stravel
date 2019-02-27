@@ -6,9 +6,6 @@ function cardsFunction() {
 
     })
   });
-
 };
 
-module.export = { cardsFunction() };
-
-// addEventListener.
+export { cardsFunction };
