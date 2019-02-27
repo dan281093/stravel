@@ -1,0 +1,87 @@
+
+<div class="container dashboards">
+      <h1 class="logo-stravel">STRAVEL</h1>
+
+  <div class="row">
+    <div class="col-xs-12 card-center">
+      <h2 class="title-bold-big card-category">Upcoming Events</h2>
+    </div>
+  </div>
+
+  <div class="col-xs-12 card-center">
+    <h3 class="title-light-big">As an attendee</h3>
+    <% if @events %>
+      <% @events.each do |event| %>
+        <%= link_to event_path(event) do %>
+          <div class="card-dashboard">
+            <div class="event-name">
+              <%= event.title %>
+            </div>
+            <%= link_to events_path do %>
+              <i class="fa fa-trash card-link"></i>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if @past_events %>
+    <div class="col-xs-12 card-center">
+      <h3 class="title-light-big">Past events as attendee</h3>
+      <% @past_events.each do |event| %>
+        <%= link_to event_path(event) do %>
+          <div class="card-dashboard">
+            <div class="event-name">
+              <%= event.title %>
+            </div>
+            <%= link_to events_path do %>
+              <i aria-hidden="true" class="fas fa-trash"></i>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if @hosting_events %>
+    <div class="col-xs-12 card-center">
+      <h3 class="title-light-big">As a host</h3>
+        <% @hosting_events.each do |event| %>
+          <%= link_to event_path(event) do %>
+          <div class="card-dashboard">
+            <div class="event-name">
+              <%= event.title %>
+            </div>
+            <%= link_to events_path do %>
+              <i class="fa fa-trash card-link"></i>
+            <% end %>
+          </div>
+          <% end %>
+        <% end %>
+    </div>
+  <% end %>
+
+  <% if @hosted_events %>
+    <div class="col-xs-12 card-center">
+      <h3 class="title-light-big">Past events as host</h3>
+      <div class="card-dashboard">
+      <% @hosted_events.each do |event| %>
+        <div class="event-name">
+          <%= event.title %>
+        </div>
+         <i aria-hidden="true" class="fas fa-trash p-right"></i>
+      <% end %>
+      </div>
+    </div>
+  <% end %>
+
+
+  <%= link_to choose_path do %>
+    <div class="text-center">
+      <button class="start-again-button">
+        Start Again
+      </button>
+    </div>
+  <% end %>
+</div>
