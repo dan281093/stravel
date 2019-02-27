@@ -19,19 +19,19 @@
   <% @events.each do |event| %>
     <div class="event-title">
       <%= event.title %>
- <%= link_to event_path(@event), method: :delete , class: "fas fa-trash"  %>
+ <%= link_to event_path(event), method: :delete , class: "fas fa-trash"  %>
 
     </div>
   <% end %>
 
   <div class="event-title">
-    <%= @event.title %> <%= link_to "Delete this event", event_path(@event), method: :delete , class: "fas fa-trash"  %>
+    <%= event.title %> <%= link_to "Delete this event", event_path(event), method: :delete , class: "fas fa-trash"  %>
   </div>
 
 
 
   <div class="event-title">
-    <%= @event.title %> <%= link_to event(@event), method: :delete , class: "fas fa-trash"  %>
+    <%= event.title %> <%= link_to event(event), method: :delete , class: "fas fa-trash"  %>
   </div>
 </div>
 <button> Add More Events </button>
