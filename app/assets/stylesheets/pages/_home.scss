@@ -1,8 +1,9 @@
-.container-couli{
+.container-home{
   height: 100vh;
   background-image: url("images/image.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .title{
@@ -14,7 +15,7 @@ color: white;
 margin-top: 20vh;
 }
 
-.container-couli img{
+.container-home img{
 filter: blur(4px);
 }
 

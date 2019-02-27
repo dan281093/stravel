@@ -21,7 +21,6 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.create(host: current_user)
-    # byebug
     redirect_to event_design_path(Wicked::FIRST_STEP, event_id: @event.id)
   end
 
