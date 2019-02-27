@@ -5,20 +5,20 @@ body {
   min-height: calc(20vh - 66px);
 }
 
-.logo {
+.logo-stravel {
 text-align: center;
 font-weight: 300;
 font-size: 35px;
 }
 
-.title2 {
+.title-bold-big {
   text-align: center;
   top: 40px;
   font-weight: bolder;
   // margin-top: 100px;
   font-size: 30px;
 }
-.title3 {
+.title-light-big {
   text-align: center;
   top: 40px;
   font-weight: lighter;
@@ -46,7 +46,7 @@ font-size: 35px;
 
 }
 
-.start-again {
+.start-again-button {
 
   background-color: #DBAD6A;
   border: none;
