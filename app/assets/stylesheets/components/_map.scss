@@ -6,3 +6,34 @@
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }
+// .mapboxgl-canvas {
+//   width: 150px !important;
+//   height: 150px !important;
+//   top: 50px;
+// }
+
+.map-container {
+  position: relative;
+}
+ .card-event-design {
+ position: relative;
+ border: 2px groove rgba(28,110,164,0.18);
+  margin: 15px;
+  padding: 23px 115px;
+  bottom: 5px;
+  top: 250px;
+   }
+
+.apply-button {
+  position: absolute;
+  background-color: #DBAD6A;
+  border: none;
+  color: white;
+  vertical-align: center;
+  padding: 15px 32px;
+  font-size: 16px;
+  border-radius: 15px;
+  bottom: 0px;
+  margin-bottom: 1px;
+  left: 45%;
+}
