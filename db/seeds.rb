@@ -84,6 +84,11 @@ interests = [
 puts 'I am creating interests now!'
 Interest.create!(interests)
 
+upscale = Interest.find_by(name: 'Upscale')
+live_bars = Interest.find_by(name: 'Live Bars')
+electro = Interest.find_by(name: 'Electro')
+festivals = Interest.find_by(name: 'Festival')
+
 user_interest = [
   { user: adam, interest: Interest.all.sample },
   { user: don, interest: Interest.all.sample },
@@ -97,13 +102,58 @@ interest1 = UserInterest.find_by(user: adam)
 interest2 = UserInterest.find_by(user: don)
 interest3 = UserInterest.find_by(user: eve)
 
-upscale = Interest.find_by(name: 'Upscale')
-live_bars = Interest.find_by(name: 'Live Bars')
-electro = Interest.find_by(name: 'Electro')
-festivals = Interest.find_by(name: 'Festival')
-
 puts 'I am creating events now!'
-Event.create!(title: 'Going Out!', description: 'Have fun', host: adam, activity: bar, date: Date.today)
-event1 = Event.find_by(title: 'Going Out!')
+
+Event.create!(
+  title: 'Night Out at Mondo 2000',
+  description: "Mondo 2000 hosts awesome Saturday Night parties.
+  I'm looking forward to meeting a lot of fun people there!",
+  latitude: 31.7811283,
+  longitude: 35.2157765,
+  host: adam,
+  address: 'Levinsky 39, Tel Aviv-Yafo',
+  activity: party,
+  date: Date.today
+)
+
+Event.create!(
+  title: 'Casual Beach Hangout at Banana Beach',
+  description: "Let's all meet at Banana Beach for some volleyball
+  and a few drinks in the sun",
+  latitude: 32.0696247,
+  longitude: 34.7630231,
+  host: don,
+  address: 'HaYarkon St 19, Tel Aviv-Yafo',
+  activity: party,
+  date: Date.today
+)
+
+Event.create!(
+  title: 'Shopping at Dizengoff Mall',
+  description: "I would like to do some fashion shopping today.
+  Anyone wants to join me?",
+  latitude: 32.0754357,
+  longitude: 34.7757615,
+  host: don,
+  address: 'Dizengoff St 50, Tel Aviv-Yafo',
+  activity: shopping,
+  date: Date.today
+)
+
+Event.create!(
+  title: 'A Star is Born',
+  description: "Who wants to join me for this awesome movie?",
+  latitude: 32.0843995,
+  longitude: 34.774258,
+  host: eve,
+  address: 'Dizengoff St 50, Tel Aviv-Yafo',
+  activity: cinema,
+  date: Date.today
+)
+
+event1 = Event.find_by(title: 'Night Out at Mondo 2000')
+event2 = Event.find_by(title: 'Casual Beach Hangout at Banana Beach')
+event3 = Event.find_by(title: 'Shopping at Dizengoff Mall')
+event4 = Event.find_by(title: 'A Star is Born')
 
 puts 'done making seeds!'
