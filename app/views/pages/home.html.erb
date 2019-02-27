@@ -7,7 +7,11 @@
   </div>
   <div class="row">
     <div class="text-center small-margin">
-      <%= link_to "Sign Up", new_user_registration_path ,class: "btn btn-primary button-event"%>
+      <% if current_user %>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-primary button-event"%>
+      <% else %>
+        <%= link_to "Sign Up", new_user_registration_path ,class: "btn btn-primary button-event"%>
+      <% end %>
     </div>
     <div class="text-center">
       <p style="color: white; margin-top: 20vh;">STRAVEL makes it easy to meet likeminded people for a great night out together</p>
