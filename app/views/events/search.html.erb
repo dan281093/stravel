@@ -1,0 +1,6 @@
+<%= simple_form_for :search, url: events_path, method: :get do |f| %>
+
+  <%= f.input :activities, collection: @activities, as: :check_boxes, include_blank: false, include_hidden: false %>
+
+  <%= f.submit "Continue" %>
+<% end %>

@@ -2,8 +2,8 @@
   <div class= "row">
       <div class="wrapper">
           <div class="col-sm-12 col-12">
-            <button class="btn btn-primary button-create" type="submit">Create Event</button>
-            <button class="btn btn-primary button-join" type="submit">Join Event</button>
+            <%= link_to "Create Event", events_path, class: "btn btn-primary button-create", method: :post %>
+            <%= link_to "Join Event", events_search_path, class: "btn btn-primary button-join", method: :get %>
           </div>
       </div>
   </div>

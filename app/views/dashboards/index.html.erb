@@ -24,6 +24,22 @@
     <% end %>
   </div>
 
+<div class="col-xs-12 card-center">
+    <h3 class="title-light-big">Past events as attendee</h3>
+    <% @past_events.each do |event| %>
+      <%= link_to event_path(event) do %>
+        <div class="card-dashboard">
+          <div class="event-name">
+            <%= event.title %>
+          </div>
+          <%= link_to events_path do %>
+            <i aria-hidden="true" class="fas fa-trash"></i>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
 
   <div class="col-xs-12 card-center">
     <h3 class="title-light-big">As a host</h3>
@@ -40,6 +56,18 @@
         <% end %>
       <% end %>
   </div>
+
+<div class="col-xs-12 card-center">
+    <h3 class="title-light-big">Past events as host</h3>
+    <div class="card-dashboard">
+    <% @hosted_events.each do |event| %>
+      <div class="event-name">
+        <%= event.title %>
+      </div>
+       <i aria-hidden="true" class="fas fa-trash p-right"></i>
+    <% end %>
+  </div>
+</div>
 
 
   <div class="text-center">
