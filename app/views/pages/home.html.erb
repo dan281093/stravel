@@ -1,23 +1,22 @@
-<div class="container-home">
-<div class="container">
-    <div class="row">
-      <div class="text-center">
-        <h1 class="title" >STRAVEL</h1>
-        <h4 class="catch-phrase">Find a cool night out together!</h4>
+<% if current_user %>
+  <%= render 'shared/dashboard' %>
+<% else %>
+  <div class="container-home">
+    <div class="container">
+      <div class="row">
+        <div class="text-center">
+          <h1 class="title" >STRAVEL</h1>
+          <h4 class="catch-phrase">Find a cool night out together!</h4>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="text-center small-margin">
-        <% if current_user %>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-primary button-event"%>
-        <% else %>
-        <%= link_to "Sign Up", new_user_registration_path ,class: "btn btn-primary button-event"%>
-        <% end %>
-      </div>
-      <div class="text-center">
-        <p style="color: white; margin-top: 20vh;">STRAVEL makes it easy to meet likeminded people for a great night out together</p>
+      <div class="row">
+        <div class="text-center small-margin">
+          <%= link_to "Sign Up", new_user_registration_path ,class: "btn btn-primary button-event"%>
+        </div>
+        <div class="text-center">
+          <p style="color: white; margin-top: 20vh;">STRAVEL makes it easy to meet likeminded people for a great night out together</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
+<% end %>
