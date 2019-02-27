@@ -29,3 +29,30 @@ form {
 .radio.btn.btn-primary.is-selected {
   background: #2D8BE2;
 }
+
+.new-events-form {
+  text-align: left;
+  font-size: 18px;
+  color: #469AE0;
+  font-weight: normal;
+}
+
+.forms-flex-body {
+  flex: 0 0 50%;
+  padding: 10px;
+}
+
+.forms-flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper-forms {
+  width: 65vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-space {
+  padding: 15px;
+}
