@@ -19,8 +19,8 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <% unless current_page?(root_path) || current_page?(event_design_path) %>
     <%= render 'shared/navbar' %>
+    <% unless current_page?(root_path) %>
     <div class="devise-container container">
       <%= yield %>
     </div>
