@@ -2,11 +2,13 @@ class DashboardsController < ApplicationController
   def index
     @events = []
     @past_events = []
-    current_user.events.each do |event|
-      if event.date >= Date.today
-        @events << event
-      else
-        @past_events << event
+    if current_user.events
+      current_user.events.each do |event|
+        if event.date >= Date.today
+          @events << event
+        else
+          @past_events << event
+        end
       end
     end
     @hosting_events = []
