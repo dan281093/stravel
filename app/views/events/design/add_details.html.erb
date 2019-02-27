@@ -1,8 +1,19 @@
-<%= simple_form_for @event, url: wizard_path, method: :put do |f| %>
+<h2 style="text-align: center;">Design Your Event!</h2>
+  <div class="container">
+    <div class="row">
+      <div class="text-center">
+        <div class="form-group">
+          <div class="flex-body">
+            <%= simple_form_for @event, url: wizard_path, method: :put do |f| %>
 
-  <%= f.input :title %>
-  <%= f.input :address %>
-  <%= f.input :description %>
+              <%= f.input :title, label: 'Title', input_html: { class: 'form-control' } %>
+              <%= f.input :address, label: 'Location', input_html: { class: 'form-control' } %>
+              <%= f.input :description, label: 'Description', input_html: { class: 'form-control' } %>
 
-  <%= f.submit "Continue" %>
-<% end %>
+              <%= f.submit "Continue" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
