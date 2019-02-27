@@ -1,0 +1,31 @@
+form {
+  .event_activity {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .radio.btn.btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0;
+
+    input {
+      display: none;
+    }
+
+    label {
+      padding: 0;
+    }
+  }
+}
+
+.radio.btn.btn-primary.is-selected {
+  background: #2D8BE2;
+}
