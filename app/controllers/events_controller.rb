@@ -2,6 +2,11 @@ class EventsController < ApplicationController
   def index
     @events = Event.where.not(latitude: nil, longitude: nil)
 
+    if params[:search].present?
+      ids = params[:search][:activities]
+      @events = @events.where(activity_id: ids)
+    end
+
     @markers = @events.map do |event|
       {
         lng: event.longitude,
@@ -23,11 +28,14 @@ class EventsController < ApplicationController
   end
 
   def search
-    # FORM TO PICK ACTIVITIES
-    # SUBMITS TO THE INDEX
+    @activities = Activity.all
   end
 
   private
+
+  def set_event
+    @event = Event.find(params[:event_id])
+  end
 
   def events_params
     params.require(:event).permit(:title, :description, :address, :longitude, :latitude)

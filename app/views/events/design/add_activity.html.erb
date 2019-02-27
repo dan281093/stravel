@@ -1,6 +1,6 @@
 <%= simple_form_for @event, url: wizard_path, method: :put do |f| %>
 
-  <%= f.association :activity, collection: @activities, as: :radio_buttons, include_blank: false, include_hidden: false %>
+  <%= f.association :activity, collection: @activities, as: :radio_buttons, include_blank: false, include_hidden: false%>
 
   <%= f.submit "Continue" %>
 <% end %>
