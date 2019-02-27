@@ -7,7 +7,6 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <title>Display a popup on click</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
@@ -19,14 +18,12 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <% unless current_page?(root_path) || current_page?(event_design_path) %>
+
     <%= render 'shared/navbar' %>
-    <div class="devise-container container">
-      <%= yield %>
-    </div>
-    <% else %>
-    <%= yield %>
-    <% end %>
+      <div class="devise-container container">
+        <%= yield %>
+      </div>
+
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
