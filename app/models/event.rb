@@ -1,6 +1,5 @@
 class Event < ApplicationRecord
   geocoded_by :address
-  searchkick
   belongs_to :host, class_name: 'User'
   belongs_to :activity, optional: true
   has_many :attendees
