@@ -11,14 +11,14 @@ UserInterest.destroy_all
 puts "destroying all interests!!!"
 Interest.destroy_all
 
+puts "destroying all users!!!"
+## clear old users
+User.destroy_all
 
 puts "destroying all events!!!"
 ## Clear all services
 Event.destroy_all
 
-puts "destroying all users!!!"
-## clear old users
-User.destroy_all
 
 puts "destroying all activities!!!"
 Activity.destroy_all
