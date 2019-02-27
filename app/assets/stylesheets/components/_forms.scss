@@ -37,7 +37,22 @@ form {
   font-weight: normal;
 }
 
-.flex-body {
+.forms-flex-body {
   flex: 0 0 50%;
   padding: 10px;
+}
+
+.forms-flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper-forms {
+  width: 65vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-space {
+  padding: 15px;
 }
