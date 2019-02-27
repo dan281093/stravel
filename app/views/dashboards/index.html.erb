@@ -1,25 +1,43 @@
-<h1>Dashboards#index</h1>
-<p>Find me in app/views/dashboards/index.html.erb</p>
+
+<div class="container dashboards">
+      <h1 class="logo">STRAVEL</h1>
+
+  <div class="row">
+    <div class="col-xs-12 card-center">
+      <h2 class="title2">Upcoming Events</h2>
+    </div>
+  </div>
+
+  <div class="col-xs-12 card-center">
+    <h3 class="title3">As an attendee</h3>
+    <% @events.each do |event| %>
+      <%= link_to event_path(event) do %>
+        <div class="card-dashboard">
+          <div class="event-name">
+            <%= event.title %>
+          </div>
+          <%= link_to events_path do %>
+            <i aria-hidden="true" class="fas fa-trash"></i>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 
 
-<div class="container">
-<div class="LOGO">
-  <h1>STRAVEL</h1>
-</div>
-</div>
-
-<div class="container">
-<div class="events">
-  <h1>Upcoming Events</h1>
-</div>
-</div>
-
-<div class="container">
-  <div class="event-name">
-    <%= @event.title %> <i aria-hidden="true" class="fas fa-trash"></i>
+  <div class="col-xs-12 card-center">
+    <h3 class="title3">As a host</h3>
+    <div class="card-dashboard">
+    <% @hosting_events.each do |event| %>
+      <div class="event-name">
+        <%= event.title %>
+      </div>
+       <i aria-hidden="true" class="fas fa-trash p-right"></i>
+    <% end %>
   </div>
 </div>
 
 
-
-  <button>Start Again</button>
+<div class="text-center">
+<button class="start-again"> Start Again </button>
+</div>

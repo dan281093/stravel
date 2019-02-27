@@ -1,5 +1,6 @@
 class DashboardsController < ApplicationController
   def index
-    @events = Event.find_by(user: current_user)
+    @events = current_user.events
+    @hosting_events = Event.where(host: current_user)
   end
 end
