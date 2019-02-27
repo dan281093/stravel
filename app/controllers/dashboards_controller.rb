@@ -1,11 +1,22 @@
 class DashboardsController < ApplicationController
   def index
-    @events = current_user.events.map do |event|
-      event.date >= Date.today
+    @events = []
+    @past_events = []
+    current_user.events.each do |event|
+      if event.date >= Date.today
+        @events << event
+      else
+        @past_events << event
+      end
     end
-    # @past_events = current_user.events.where(date > Date.today)
-    @hosting_events = Event.where(host: current_user).map do |event|
-      event.date >= Date.today
+    @hosting_events = []
+    @hosted_events = []
+    Event.where(host: current_user).each do |event|
+      if event.date >= Date.today
+        @hosting_events << event
+      else
+        @hosted_events << event
+      end
     end
   end
 end
