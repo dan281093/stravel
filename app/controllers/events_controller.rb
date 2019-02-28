@@ -19,6 +19,10 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
   end
 
+  def destroy
+    @event = Event.destroy
+  end
+
   def create
     @event = Event.create(host: current_user)
     redirect_to event_design_path(Wicked::FIRST_STEP, event_id: @event.id)
