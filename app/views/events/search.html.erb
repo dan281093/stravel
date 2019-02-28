@@ -5,7 +5,7 @@
                <%= f.input :activity, collection: @activities, as: :check_boxes, item_wrapper_class: 'btn btn-primary cards', boolean_style: :inline, include_blank: false, include_hidden: false, label: false %>
 
 
-          <div class="small-margin"><%= f.submit "Continue", disabled: true, :class => 'button-event' %></div>
+          <div class="small-margin"><%= f.submit "Continue", :class => 'button-event' %></div>
         <% end %>
     </div>
   </div>
