@@ -15,7 +15,7 @@
     <br>
     <div class="col-xs-12 card-center small-margin">
       <div class="card-event-show1">
-          <%= cl_image_tag current_user.photo, class: 'card-avatar' %>
+          <%= image_tag avatar_url(@event.host), class: 'card-avatar' %>
           <h2 class="small-text"><%= @event.host.first_name %></h2>
       </div>
     </div>
