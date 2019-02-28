@@ -46,10 +46,10 @@ font-size: 35px;
 
 .center-p {
   text-align: center;
-  left: 12px;
 }
 
 .left-p {
-  position: absolute;
-  // left:
+  position: relative;
+  left: -100px;
+
 }
