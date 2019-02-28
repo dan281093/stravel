@@ -44,12 +44,13 @@ font-size: 35px;
 }
 
 .event-name {
+  display: flex;
   font-size: 24px;
   // text-align: center;
   width: 100%;
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+      bottom: -6px;
+    left: 10px;
 }
 
 .start-again-button {
@@ -60,7 +61,7 @@ font-size: 35px;
   padding: 15px 32px;
   font-size: 16px;
   border-radius: 15px;
-  margin-top: 125px;
+  margin-top: 10%;
 }
 
 .trash-can {
@@ -74,8 +75,8 @@ font-size: 35px;
   z-index: 2;
   color: black;
   opacity: 0;
-
 }
-// .card-link:hover {
-//   opacity: 0.1;
-// }
+.card-link:hover {
+  opacity: 0.1;
+  z-index: -2;
+}
