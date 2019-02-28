@@ -10,7 +10,8 @@ class EventsController < ApplicationController
     @markers = @events.map do |event|
       {
         lng: event.longitude,
-        lat: event.latitude
+        lat: event.latitude,
+        infoWindow: "#{event.title}"
       }
     end
   end
