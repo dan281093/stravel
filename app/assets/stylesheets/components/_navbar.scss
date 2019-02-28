@@ -1,6 +1,6 @@
 /* Main navbar */
 .navbar-wagon {
-  background-color: transparent;
+  background-color: #FEF5EE;
   transition: all 0.3s ease;
   height: 70px;
   padding: 0px 30px;
@@ -9,6 +9,7 @@
   justify-content: space-between;
   position: fixed;
   width: 100%;
+  z-index: 999;
 }
 
 .navbar-wagon h1{
@@ -26,8 +27,8 @@
 
 /* User Avatar */
 .navbar-wagon .avatar {
-  height: 35px;
-  width: 35px;
+  height: 45px;
+  width: 45px;
   border-radius: 50%;
 }
 
@@ -85,13 +86,19 @@
 }
 
 .devise-container{
-  padding-top: 30px;
+  padding-top: 50px;
 }
 
 .devise-container h2 {
-  margin-top: 80px;
+  margin-top: 40px;
 }
 .burger{
 flex: 0 0 19vw;
 text-align: right;
+}
+.avatar-dropdown {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  z-index: 9999;
 }
