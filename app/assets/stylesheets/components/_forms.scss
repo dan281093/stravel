@@ -9,12 +9,14 @@ form {
     margin: 0 auto;
   }
 
-  .radio.btn.btn-primary {
+  .radio.btn.btn-primary,
+  .checkbox.btn.btn-primary {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 0;
+    padding: 0;
 
     input {
       display: none;
@@ -26,7 +28,8 @@ form {
   }
 }
 
-.radio.btn.btn-primary.is-selected {
+.radio.btn.btn-primary.is-selected,
+.checkbox.btn.btn-primary.is-selected {
   background: #2D8BE2;
 }
 
