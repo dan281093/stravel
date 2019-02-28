@@ -8,39 +8,35 @@
 
   <div class="col-xs-12 card-center">
     <h3 class="title-light-big">As an attendee</h3>
-    <% if @events %>
-      <% @events.each do |event| %>
-        <%= link_to event_path(event) do %>
-          <div class="card-dashboard">
-            <div class="event-name">
-              <%= event.title %>
-            </div>
-            <%= link_to events_path do %>
-              <i class="fa fa-trash card-link"></i>
-            <% end %>
+    <% current_user.upcoming_events.each do |event| %>
+      <%= link_to event_path(event) do %>
+        <div class="card-dashboard">
+          <div class="event-name">
+            <%= event.title %>
           </div>
-        <% end %>
+          <%= link_to events_path do %>
+            <i class="fa fa-trash card-link"></i>
+          <% end %>
+        </div>
       <% end %>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 
-  <% if @past_events %>
-    <div class="col-xs-12 card-center">
-      <h3 class="title-light-big">Past events as attendee</h3>
-      <% @past_events.each do |event| %>
-        <%= link_to event_path(event) do %>
-          <div class="card-dashboard">
-            <div class="event-name">
-              <%= event.title %>
-            </div>
-            <%= link_to events_path do %>
-              <i aria-hidden="true" class="trash-can fas fa-trash"></i>
-            <% end %>
+  <div class="col-xs-12 card-center">
+    <h3 class="title-light-big">Past events as attendee</h3>
+    <% current_user.past_events.each do |event| %>
+      <%= link_to event_path(event) do %>
+        <div class="card-dashboard">
+          <div class="event-name">
+            <%= event.title %>
           </div>
-        <% end %>
+          <%= link_to events_path do %>
+            <i aria-hidden="true" class="trash-can fas fa-trash"></i>
+          <% end %>
+        </div>
       <% end %>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 
   <% if @hosting_events %>
     <div class="col-xs-12 card-center">

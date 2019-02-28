@@ -9,4 +9,12 @@ class User < ApplicationRecord
   has_many :attendees
   has_many :events, through: :attendees
   mount_uploader :photo, PhotoUploader
+
+  def upcoming_events
+    events.where('date >= ?', DateTime.now)
+  end
+
+  def past_events
+    events.where('date < ?', DateTime.now)
+  end
 end
