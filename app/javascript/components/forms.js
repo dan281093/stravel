@@ -1,8 +1,9 @@
-const toggleRadio = (span) => {
+const toggleBtn = (span) => {
   const input = span.querySelector('input');
+  const isCheckbox = span.classList.contains('checkbox');
   input.checked = !input.checked;
 
-  if (!input.checked) return
+  if (!isCheckbox && !input.checked) return
 
   span.classList.toggle('is-selected');
 };
@@ -13,7 +14,7 @@ const clearSelections = (spans) => {
 
 const handleSubmitBtn = () => {
   const button = document.querySelector('input[type="submit"]');
-  const inputs = document.querySelectorAll('input[name="event[activity_id]"]');
+  const inputs = document.querySelectorAll('span input');
   let selected;
 
   inputs.forEach((input) => {
@@ -35,11 +36,33 @@ function setupAddActivityForm () {
 
     spans.forEach(span => span.addEventListener('click', () => {
       clearSelections(spans);
-      toggleRadio(span);
-      handleSubmitBtn(spans);
+      toggleBtn(span);
+      handleSubmitBtn();
+    }));
+
+    const labels = document.querySelectorAll('label');
+    labels.forEach(label => label.addEventListener('click', (e) => {
+      e.preventDefault();
     }));
   }
 };
 
-export { setupAddActivityForm };
+function setupSelectActivitiesForm () {
+  const form = document.querySelector('.search_activity');
+
+  if (form) {
+    const spans = document.querySelectorAll('.checkbox.btn.btn-primary.cards');
+
+    spans.forEach(span => span.addEventListener('click', () => {
+      toggleBtn(span);
+    }));
+
+    const labels = document.querySelectorAll('label');
+    labels.forEach(label => label.addEventListener('click', (e) => {
+      e.preventDefault();
+    }));
+  }
+}
+
+export { setupAddActivityForm, setupSelectActivitiesForm };
 

@@ -113,7 +113,7 @@ Event.create!(
   host: adam,
   address: 'Levinsky 39, Tel Aviv-Yafo',
   activity: party,
-  date: Date.today
+  date: '2029-4-4'
 )
 
 Event.create!(
@@ -125,7 +125,7 @@ Event.create!(
   host: don,
   address: 'HaYarkon St 19, Tel Aviv-Yafo',
   activity: party,
-  date: Date.today
+  date: '2029-4-4'
 )
 
 Event.create!(
@@ -137,7 +137,7 @@ Event.create!(
   host: don,
   address: 'Dizengoff St 50, Tel Aviv-Yafo',
   activity: shopping,
-  date: Date.today
+  date: '2029-4-4'
 )
 
 Event.create!(
@@ -148,7 +148,7 @@ Event.create!(
   host: eve,
   address: 'Dizengoff St 50, Tel Aviv-Yafo',
   activity: cinema,
-  date: Date.today
+  date: '2029-4-4'
 )
 
 event1 = Event.find_by(title: 'Night Out at Mondo 2000')
