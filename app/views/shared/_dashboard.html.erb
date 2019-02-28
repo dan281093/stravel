@@ -1,7 +1,5 @@
 
 <div class="container dashboards">
-      <h1 class="logo-stravel">STRAVEL</h1>
-
   <div class="row">
     <div class="col-xs-12 card-center">
       <h2 class="title-bold-big card-category">Upcoming Events</h2>
@@ -36,7 +34,7 @@
               <%= event.title %>
             </div>
             <%= link_to events_path do %>
-              <i aria-hidden="true" class="fas fa-trash"></i>
+              <i aria-hidden="true" class="trash-can fas fa-trash"></i>
             <% end %>
           </div>
         <% end %>
@@ -70,7 +68,7 @@
         <div class="event-name">
           <%= event.title %>
         </div>
-         <i aria-hidden="true" class="fas fa-trash p-right"></i>
+         <i aria-hidden="true" class="trash-can fas fa-trash p-right"></i>
       <% end %>
       </div>
     </div>
