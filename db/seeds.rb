@@ -29,14 +29,17 @@ users = [
     email: 'adam@test.com',
     description: "Hi! I'm Adam and I would love to go out with you!",
     password: '123456',
-    birth_date: '1987-4-23' },
+    birth_date: '1987-4-23',
+    remote_photo_url: "https://picsum.photos/200"
+  },
   {
     first_name: 'Eve',
     last_name: 'Mendona',
     email: 'eve@test.com',
     description: "Hi! I'm Eve and I would love to go out with you!",
     password: '123456',
-    birth_date: '1990-8-15'
+    birth_date: '1990-8-15',
+    remote_photo_url: "https://picsum.photos/200"
   },
   {
     first_name: 'Donald',
@@ -44,7 +47,8 @@ users = [
     email: 'don@test.com',
     description: "Hi! I'm Donald and I would love to go out with you!",
     password: '123456',
-    birth_date: '1990-8-15'
+    birth_date: '1990-8-15',
+    remote_photo_url: "https://picsum.photos/200"
   }
 ]
 
