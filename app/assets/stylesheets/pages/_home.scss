@@ -1,4 +1,4 @@
-.container-home{
+.container-home {
   height: 100vh;
   background-image: url("images/image.png");
   background-size: cover;
@@ -6,19 +6,28 @@
   background-attachment: fixed;
 }
 
-.title{
+.title {
 color: white;
+margin-top: 45px;
 }
 
-.catch-phrase{
+.catch-phrase {
 color: white;
-margin-top: 20vh;
+margin-top: 15vh;
 }
 
 .container-home img{
 filter: blur(4px);
 }
 
-.infos{
+.infos {
   color: white;
+}
+
+.sign-out {
+  color: white;
+}
+
+.sign.out:hover {
+  color: #DBAD6A;
 }
