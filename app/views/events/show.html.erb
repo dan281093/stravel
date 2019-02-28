@@ -6,7 +6,7 @@
   <div class="row">
     <div class="col-xs-12 card-center">
       <div class="card-event-show1">
-        <p class="left-p">Location</p>
+        <p class="left-p">Location</p><br>
         <div class="card">
           <p class="center-p"><%= @event.address %></p>
         </div>
@@ -15,10 +15,8 @@
     <br>
     <div class="col-xs-12 card-center small-margin">
       <div class="card-event-show1">
-        <div class="card-user-pic">
-          <img src="..." class="pic">
-          <h2 class="center-p small-text"><%= @event.host.first_name %></h2>
-        </div>
+          <%= cl_image_tag current_user.photo, class: 'card-avatar' %>
+          <h2 class="small-text"><%= @event.host.first_name %></h2>
       </div>
     </div>
     <br>
@@ -32,7 +30,7 @@
 
 
 <%= link_to dashboards_path do  %>
-  <div class="text-center">
+  <div class="text-center"><br>
     <div class="add-button ">
       Add
     </div>
