@@ -1,12 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="text-center">
-      TEST
         <%= simple_form_for :search, url: events_path, method: :put do |f| %>
                <%= f.input :activity, collection: @activities, as: :radio_buttons, item_wrapper_class: 'btn btn-primary cards', boolean_style: :inline, include_blank: false, include_hidden: false, label: false %>
 
 
-          <%= f.submit "Continue", disabled: true, :class => 'button-event' %>
+          <div class="small-margin"><%= f.submit "Continue", disabled: true, :class => 'button-event' %></div>
         <% end %>
     </div>
   </div>
