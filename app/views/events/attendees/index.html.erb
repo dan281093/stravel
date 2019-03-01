@@ -1,0 +1,24 @@
+  <div class="container">
+    <h1 class="logo-stravel">STRAVEL</h1>
+  </div>
+
+<div class="container">
+<div class="event-description ">
+  <p> The following people are interested in attending your event!</p>
+</div>
+</div>
+
+<p class="attendees"> Select Attendees </p>
+<% @attendees.each do |attendee| %>
+<div class="card-user-pic">
+  <img src="..." class="card-user-avatar">
+  <div class="card-user-infos">
+    <h2><%= link_to attendee.user.first_name, event_attendee_path(@event, attendee) %></h2>
+    <p><%= link_to "Accept", event_attendee_path(@event, attendee, query: "Accept"), method: :patch %></p>
+    <p><%= link_to "Decline", event_attendee_path(@event, attendee, query:"Decline"), method: :patch %></p>
+    <p>Insert something</p>
+  </div>
+</div>
+<% end %>
+
+<button>Continue</button>
