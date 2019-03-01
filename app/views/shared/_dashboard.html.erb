@@ -2,13 +2,32 @@
   <div class="title-bold-big small-margin">
     Dashboard
   </div>
-    <% @events.each do |event| %>
-    <div class="card-dashboard">
-      <%= link_to event_path(event) do %>
+  <h3 class="title-light-big">Future Events</h3>
+    <% current_user.events.each do |event| %>
+  <div class="card-dashboard">
+    <%= link_to event_path(event) do %>
       <%= event.title %>
+      <p class="small-margin"><%= event.address %></p>
+      <div class="activity-date">
+        <p><%= event.activity.name.upcase %></p>
+        <p><%= event.date %></p>
+      </div>
   </div>
+      <% end %>
     <% end %>
-     <% end %>
+  <h3 class="title-light-big">Events I am Hosting</h3>
+    <% @events.where(host_id: current_user.id).each do |event| %>
+  <div class="card-dashboard">
+    <%= link_to event_path(event) do %>
+      <%= event.title %>
+      <p class="small-margin"><%= event.address %></p>
+      <div class="activity-date">
+        <p><%= event.activity.name.upcase %></p>
+        <p><%= event.date %></p>
+      </div>
+  </div>
+      <% end %>
+    <% end %>
     <div class="start-over">
       <%= link_to "Start Again", choose_path, class: "btn btn-primary button-event-signup" %>
     </div>
