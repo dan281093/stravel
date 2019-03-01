@@ -1,11 +1,11 @@
 <div class="container show">
-  <div class="title-bold-big small-margin">
+  <div class="h2-choose small-margin text-center">
     <%= @event.title %>
   </div>
 
   <div class="row">
-    <div class="col-xs-12 card-center">
-      <div class="card-event-show1">
+    <div class="col-xs-12 card-center small-margin">
+      <div class="card-event-show1 ">
         <p class="left-p">Location</p><br>
         <div class="card">
           <p class="center-p"><%= @event.address %></p>
@@ -29,3 +29,10 @@
   </div>
 </div>
 
+<%= link_to dashboards_path do  %>
+  <div class="text-center"><br>
+    <div class="button-event-signin">
+      Add
+    </div>
+  </div>
+<% end %>
