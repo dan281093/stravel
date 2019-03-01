@@ -1,5 +1,5 @@
 .button-event {
-  background-color: #ee965b; /* Beige */
+  background-color: #FACF5A;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -9,7 +9,7 @@
   font-size: 16px;
   border-radius: 15px;
   transition: 0.6s ease;
-  box-shadow: 3px 3px 5px #E6E6E6;
+  box-shadow: 3px 3px 5px #27737C;
 }
 
 .button-event:hover{
@@ -17,7 +17,7 @@
 }
 
 .button-event-signin {
-  background-color: #ED9153; /* Beige */
+  background-color: #FACF5A;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -71,8 +71,8 @@
 .button-create {
   background-color: #F3EBDF;
   border: 2px solid;
-  border-color:#ED9153;
-  color: #ED9153;
+  color:#ED9153;
+  border-color: #FACF5A;
   padding: 30px 24px;
   text-align: center;
   text-decoration: none;
@@ -104,9 +104,9 @@
 }
 
 .button-join {
-    background-color: #ED9153;
-    color: white;
-    border-color:#ED9153;
+    background-color: #FACF5A;
+    color: #FBEDE1;
+    border-color:#FBEDE1;
     padding: 30px 24px;
     text-align: center;
     text-decoration: none;
