@@ -48,10 +48,19 @@ function setupAddActivityForm () {
 };
 
 function setupSelectActivitiesForm () {
-  const form = document.querySelector('.search_activity');
+  const search = document.querySelector('.search_activity');
+  const userActivities = document.querySelector('.user_activities');
+
+  const form = search || userActivities;
 
   if (form) {
     const spans = document.querySelectorAll('.checkbox.btn.cards');
+
+    spans.forEach(span => {
+      const input = span.querySelector('input');
+
+      if (input.checked) span.classList.toggle('is-selected');
+    });
 
     spans.forEach(span => span.addEventListener('click', () => {
       toggleBtn(span);

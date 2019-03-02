@@ -8,6 +8,19 @@ Rails.application.routes.draw do
   get 'events/search', to: 'events#search'
   get 'events/checkout', to: 'events#checkout'
 
+  scope :users do
+    resources :user_activities,
+      only: [:new, :create],
+      path: :activites,
+      controller: "users/activities" do
+        collection do
+          get 'bulk_edit', to: "users/activities#edit"
+          patch 'bulk_update', to: "users/activities#update"
+        end
+      end
+  end
+
+
 
 
   # resources :attendees, only: [:index, :show]
