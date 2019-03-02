@@ -1,0 +1,55 @@
+.card-attendees {
+  border: 2px groove rgba(28, 110, 164, 0.18);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  height: 120px;
+  padding: 0px 50px;
+  text-align: center;
+  position: relative;
+  margin-top: 25px;
+    h1 {
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+      font-size: 16px;
+      color: black;
+    }
+    p {
+      font-size: 12px;
+    }
+}
+
+.attendees {
+  padding-bottom: 25px;
+}
+
+.title-attendees {
+  text-align: center;
+  top: 40px;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+.btn-decline {
+  color: white;
+  background-color: #878787;
+  border: 1px solid #878787;
+  padding: 3px 18px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  margin: 5px;
+}
+
+.btn-approve {
+  color: white;
+  background-color: #1BCB7F;
+  border: 1px solid #1BCB7F;
+  padding: 3px 18px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  margin: 2px;
+}
