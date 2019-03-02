@@ -18,6 +18,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @host = @event.host
   end
 
   def destroy
@@ -36,7 +37,22 @@ class EventsController < ApplicationController
     @activities = Activity.all
   end
 
+  def edit
+    @event = Event.find(params[:id])
+  end
+
+  def update
+    @event = Event.find(params[:id])
+    @event.update(event_params)
+    @event.save!
+    redirect_to dashboards_path
+  end
+
   private
+
+  def event_params
+    params.require(:event).permit(:title, :address, :description, :date)
+  end
 
   def set_event
     @event = Event.find(params[:event_id])

@@ -117,11 +117,11 @@ Event.create!(
   host: adam,
   address: 'Levinsky 39, Tel Aviv-Yafo',
   activity: party,
-  date: '2029-04-04'
+  date: '2019-04-04'
 )
 
 Event.create!(
-  title: 'Casual Beach Hangout at Banana Beach',
+  title: 'Casual Beach Hangout',
   description: "Let's all meet at Banana Beach for some volleyball
   and a few drinks in the sun",
   latitude: 32.0696247,
@@ -129,7 +129,7 @@ Event.create!(
   host: don,
   address: 'HaYarkon St 19, Tel Aviv-Yafo',
   activity: party,
-  date: '2029-04-04'
+  date: '2019-04-04'
 )
 
 Event.create!(
@@ -141,7 +141,7 @@ Event.create!(
   host: don,
   address: 'Dizengoff St 50, Tel Aviv-Yafo',
   activity: shopping,
-  date: '2029-04-04'
+  date: '2019-04-04'
 )
 
 Event.create!(
@@ -152,7 +152,7 @@ Event.create!(
   host: eve,
   address: 'Dizengoff St 50, Tel Aviv-Yafo',
   activity: cinema,
-  date: '2029-04-04'
+  date: '2019-04-04'
 )
 
 event1 = Event.find_by(title: 'Night Out at Mondo 2000')

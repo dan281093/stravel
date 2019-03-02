@@ -1,81 +1,34 @@
-
-<div class="container dashboards">
-  <div class="row">
-    <div class="col-xs-12 card-center">
-      <h2 class="title-bold-big card-category">Upcoming Events</h2>
-    </div>
+<div class="container show">
+  <div class="title-bold-big small-margin">
+    Dashboard
   </div>
-
-  <div class="col-xs-12 card-center">
-    <h3 class="title-light-big">As an attendee</h3>
-    <% current_user.upcoming_events.each do |event| %>
-      <%= link_to event_path(event) do %>
-        <div class="card-dashboard">
-          <div class="event-name">
-            <%= event.title %>
-          </div>
-          <%= link_to events_path do %>
-            <i class="fa fa-trash card-link"></i>
-          <% end %>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
-
-  <div class="col-xs-12 card-center">
-    <h3 class="title-light-big">Past events as attendee</h3>
-    <% current_user.past_events.each do |event| %>
-      <%= link_to event_path(event) do %>
-        <div class="card-dashboard">
-          <div class="event-name">
-            <%= event.title %>
-          </div>
-          <%= link_to events_path do %>
-            <i aria-hidden="true" class="trash-can fas fa-trash"></i>
-          <% end %>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
-
-  <% if @hosting_events %>
-    <div class="col-xs-12 card-center">
-      <h3 class="title-light-big">As a host</h3>
-        <% @hosting_events.each do |event| %>
-          <%= link_to event_path(event) do %>
-          <div class="card-dashboard">
-            <div class="event-name">
-              <%= event.title %>
-            </div>
-            <%= link_to events_path do %>
-              <i class="fa fa-trash card-link"></i>
-            <% end %>
-          </div>
-          <% end %>
-        <% end %>
-    </div>
-  <% end %>
-
-  <% if @hosted_events %>
-    <div class="col-xs-12 card-center">
-      <h3 class="title-light-big">Past events as host</h3>
-      <div class="card-dashboard">
-      <% @hosted_events.each do |event| %>
-        <div class="event-name">
-          <%= event.title %>
-        </div>
-         <i aria-hidden="true" class="trash-can fas fa-trash p-right"></i>
-      <% end %>
+  <h3 class="title-light-big">Future Events</h3>
+    <% current_user.events.each do |event| %>
+  <div class="card-dashboard">
+    <%= link_to event_path(event) do %>
+      <%= event.title %>
+      <p class="small-margin"><%= event.address %></p>
+      <div class="activity-date">
+        <p><%= event.activity.name.upcase %></p>
+        <p><%= event.date %></p>
       </div>
+  </div>
+      <% end %>
+    <% end %>
+  <h3 class="title-light-big">Events I am Hosting</h3>
+    <% @events.where(host_id: current_user.id).each do |event| %>
+  <div class="card-dashboard">
+    <%= link_to event_path(event) do %>
+      <%= event.title %>
+      <p class="small-margin"><%= event.address %></p>
+      <div class="activity-date">
+        <p><%= event.activity.name.upcase %></p>
+        <p><%= event.date %></p>
+      </div>
+  </div>
+      <% end %>
+    <% end %>
+    <div class="start-over">
+      <%= link_to "Start Again", choose_path, class: "btn btn-primary button-event-signup" %>
     </div>
-  <% end %>
-
-
-  <%= link_to choose_path do %>
-    <div class="text-center">
-      <button class="start-again-button">
-        Start
-      </button>
-    </div>
-  <% end %>
 </div>
