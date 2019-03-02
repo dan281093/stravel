@@ -4,7 +4,7 @@
       <div class="text-center">
         <%= simple_form_for @event, url: wizard_path, method: :put do |f| %>
 
-          <%= f.association :activity, collection: @activities, as: :radio_buttons, item_wrapper_class: 'btn btn-primary cards', boolean_style: :inline, include_blank: false, include_hidden: false, label: false %>
+          <%= f.association :activity, collection: @activities, as: :radio_buttons, item_wrapper_class: 'btn cards', boolean_style: :inline, include_blank: false, include_hidden: false, label: false %>
 
           <div class="small-margin"><%= f.submit "Continue", disabled: true, :class => 'button-event' %></div>
         <% end %>

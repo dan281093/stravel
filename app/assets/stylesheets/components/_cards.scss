@@ -16,14 +16,15 @@
   margin: 15px 10px;
   border-style: solid;
   border-color: white;
-  box-shadow: 4px 4px 7px #E6E6E6;
+  box-shadow: 4px 4px 7px #27737C;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 200;
 }
 
-.cards:hover {
-  background-color:#d0ac5e;
+
+.cards:active {
+  background-color:#233142;
   border-style: none;
 }
 

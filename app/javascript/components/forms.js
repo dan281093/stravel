@@ -32,7 +32,7 @@ function setupAddActivityForm () {
   const form = document.querySelector('.edit_event');
 
   if (form) {
-    const spans = document.querySelectorAll('.radio.btn.btn-primary.cards');
+    const spans = document.querySelectorAll('.radio.btn.cards');
 
     spans.forEach(span => span.addEventListener('click', () => {
       clearSelections(spans);
@@ -51,7 +51,7 @@ function setupSelectActivitiesForm () {
   const form = document.querySelector('.search_activity');
 
   if (form) {
-    const spans = document.querySelectorAll('.checkbox.btn.btn-primary.cards');
+    const spans = document.querySelectorAll('.checkbox.btn.cards');
 
     spans.forEach(span => span.addEventListener('click', () => {
       toggleBtn(span);
