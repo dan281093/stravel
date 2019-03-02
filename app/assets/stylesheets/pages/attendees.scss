@@ -40,6 +40,7 @@
   opacity: 0.6;
   transition: opacity 0.3s ease;
   margin: 5px;
+  text-align: center;
 }
 
 .btn-approve {
@@ -52,4 +53,39 @@
   opacity: 0.6;
   transition: opacity 0.3s ease;
   margin: 2px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.attendee-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 60%;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+.attendee-center {
+  text-align: center
+}
+
+.btn-test {
+  color: white;
+  border: 1px solid black;
+  padding: 7px 18px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  margin: 1px;
+  text-align: center;
+  font-size: 12px;
+  width: 42vw;
+  height: 35px;
+}
+
+.attendee-hobbies {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
 }

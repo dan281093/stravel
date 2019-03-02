@@ -1,29 +1,35 @@
-
-<div class="container">
-  <div class="LOGO">
-    <h1>STRAVEL</h1>
+<div class="container show">
+  <div class="title-bold-big small-margin">
+    <%= @attendee.user.first_name + " " + @attendee.user.last_name %>
   </div>
-</div>
-
-<%= cl_image_tag("IMAGE_WITH_FACE_ID",
-      width: 150, height: 150, crop: :thumb, gravity: :face) %>
-
-<div class="container">
-  <div class="name">
-    <h1><%= @attendee.user.first_name %></h1>
+  <div class="row attendee-center">
+    <%= image_tag avatar_url(@attendee.user), class: 'attendee-avatar' %>
   </div>
-</div>
-
-      <div class="container">
-<div class="name">
+  <h3 class="title-attendees">About</h3>
   <p><%= @attendee.user.description %></p>
-</div>
-</div>
-<% if @attendee.status == 'pending '%>
-
-    <p><%= link_to "Accept", event_attendee_path(@event, @attendee, query: "Accept"), method: :patch %></p>
-    <p><%= link_to "Decline", event_attendee_path(@event, @attendee, query:"Decline"), method: :patch %></p>
+  <h3 class="title-attendees">Hobbies & Interests</h3>
+  <div class="row attendee-hobbies">
+    <p class="btn-test">Snowboarding</p>
+    <p class="btn-test">Hiking</p>
+  </div>
+  <div class="row attendee-hobbies">
+    <p class="btn-test">Manchester United</p>
+    <p class="btn-test">German Beer</p>
+  </div>
+  <div class="row attendee-hobbies">
+    <p class="btn-test">Surfing</p>
+    <p class="btn-test">Coding</p>
+  </div>
+<% if @attendee.status == 'pending' %>
+    <p><%= link_to "Accept", event_attendee_path(@event, @attendee, query: "Accept"), method: :patch, class: 'btn-approve' %></p>
+    <p><%= link_to "Decline", event_attendee_path(@event, @attendee, query:"Decline"), method: :patch, class: 'btn-decline' %></p>
     <% else %>
-
-    <h4><%= @attendee.status  %></h4>
+      <% if @attendee.status == 'accepted' %>
+        <p class='btn-approve'><%= @attendee.status %></p>
+      <% else %>
+        <p class='btn-decline'><%= @attendee.status %></p>
+      <% end %>
 <% end %>
+</div>
+
+
