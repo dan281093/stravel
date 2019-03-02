@@ -16,8 +16,8 @@
             <% end %>
           </li>
           <li>
-            <%= link_to "#" do %>
-            <i class="fa fa-cog"></i>  <%= t(".settings", default: "Settings") %>
+            <%= link_to "choose" do %>
+            <i class="fa fa-cog"></i>  <%= t(".choose", default: "Choose Event") %>
             <% end %>
           </li>
           <li>
@@ -46,8 +46,8 @@
           <li> <%= link_to edit_user_registration_path do %>
             <i class="fa fa-user"></i>         <%= t(".profile", default: "Profile") %>
           <% end %></li>
-          <li>              <%= link_to "#" do %>
-            <i class="fa fa-cog"></i> <%= t(".settings", default: "Settings") %>
+          <li>              <%= link_to "choose" do %>
+            <i class="fa fa-cog"></i> <%= t(".choose", default: "Choose Event") %>
           <% end %></li>
           <li>
             <%= link_to destroy_user_session_path, method: :delete do %>
