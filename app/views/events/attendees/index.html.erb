@@ -1,24 +1,17 @@
-  <div class="container">
-    <h1 class="logo-stravel">STRAVEL</h1>
+<div class="container show">
+  <div class="title-bold-big small-margin">
+    <%= @event.title %>
   </div>
-
-<div class="container">
-<div class="event-description ">
-  <p> The following people are interested in attending your event!</p>
-</div>
-</div>
-
-<p class="attendees"> Select Attendees </p>
-<% @attendees.each do |attendee| %>
-<div class="card-user-pic">
-  <img src="..." class="card-user-avatar">
-  <div class="card-user-infos">
-    <h2><%= link_to attendee.user.first_name, event_attendee_path(@event, attendee) %></h2>
-    <p><%= link_to "Accept", event_attendee_path(@event, attendee, query: "Accept"), method: :patch %></p>
-    <p><%= link_to "Decline", event_attendee_path(@event, attendee, query:"Decline"), method: :patch %></p>
-    <p>Insert something</p>
+  <h3 class="title-attendees">The following people are interested in your events!</h3>
+    <% @attendees.each do |attendee| %>
+  <div class="card-attendees">
+    <div class="row attendees">
+      <h1><%= link_to attendee.user.first_name + " " + attendee.user.last_name, event_attendee_path(@event, attendee) %></h1>
+    </div>
+    <div class="row attendees">
+    <%= link_to "Accept", event_attendee_path(@event, attendee, query: "Accept"), method: :patch, class: 'btn-approve' %>
+    <%= link_to "Decline", event_attendee_path(@event, attendee, query:"Decline"), method: :patch, class: 'btn-decline' %>
+    <% end %>
+    </div>
   </div>
 </div>
-<% end %>
-
-<button>Continue</button>
