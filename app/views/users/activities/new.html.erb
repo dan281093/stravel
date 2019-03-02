@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="text-center small-margin">
+        <%= simple_form_for @user, url: user_activities_path, method: :post do |f| %>
+               <%= f.association :activities, collection: @activities, as: :check_boxes, item_wrapper_class: 'btn cards', boolean_style: :inline, include_blank: false, include_hidden: false, label: false %>
+
+
+          <div class="small-margin"><%= f.submit "Continue", :class => 'button-event' %></div>
+        <% end %>
+    </div>
+  </div>
+</div>
