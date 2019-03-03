@@ -9,8 +9,13 @@
       <h1><%= link_to attendee.user.first_name + " " + attendee.user.last_name, event_attendee_path(@event, attendee) %></h1>
     </div>
     <div class="row attendees">
-    <%= link_to "Accept", event_attendee_path(@event, attendee, query: "Accept"), method: :patch, class: 'btn-approve' %>
-    <%= link_to "Decline", event_attendee_path(@event, attendee, query:"Decline"), method: :patch, class: 'btn-decline' %>
+      <% if attendee.status == 'accepted' %>
+        <p class='status-approve'><%= attendee.status %></p>
+      <% elsif attendee.status == 'declined'%>
+        <p class='status-decline'><%= attendee.status %></p>
+      <% else %>
+        <p class='btn-pending'><%= attendee.status %></p>
+      <% end %>
     <% end %>
     </div>
   </div>

@@ -16,11 +16,16 @@
     <% end %>
   </div>
 <% if @attendee.status == 'pending' %>
+    <div class="inline-button">
     <p><%= link_to "Accept", event_attendee_path(@event, @attendee, query: "Accept"), method: :patch, class: 'btn-approve' %></p>
     <p><%= link_to "Decline", event_attendee_path(@event, @attendee, query:"Decline"), method: :patch, class: 'btn-decline' %></p>
+    </div>
     <% else %>
       <% if @attendee.status == 'accepted' %>
         <p class='btn-approve'><%= @attendee.status %></p>
+        <%= link_to event_attendee_path(@event, @attendee, query:"Decline"), method: :patch do %>
+          <i class="far fa-trash-alt"></i>
+        <% end %>
       <% else %>
         <p class='btn-decline'><%= @attendee.status %></p>
       <% end %>
