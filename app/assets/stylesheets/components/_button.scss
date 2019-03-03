@@ -1,5 +1,5 @@
 .button-event {
-  background-color: #FACF5A;
+  background-color: #ED9153;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -16,7 +16,7 @@
 }
 
 .button-event-signin {
-  background-color: #FACF5A;
+  background-color: #ED9153;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -104,9 +104,8 @@
 }
 
 .button-join {
-    background-color: #FACF5A;
+    background-color: #ED9153;
     color: #FBEDE1;
-    border-color:#FBEDE1;
     padding: 30px 24px;
     text-align: center;
     text-decoration: none;
@@ -139,3 +138,26 @@
   .big-margin {
     margin-top: 150px !important;
   }
+
+.apply-button {
+  background-color: #ED9153;
+  border: none;
+  color: #FBEDE1;
+  vertical-align: center;
+  padding: 15px 32px;
+  font-size: 16px;
+  border-radius: 15px;
+}
+
+.add-button {
+  background-color: #ED9153;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 15px;
+  margin-bottom: 4px;
+}

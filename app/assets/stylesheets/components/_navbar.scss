@@ -1,8 +1,9 @@
 /* Main navbar */
 .navbar-wagon {
-  background-color: #4F9DA6;
+  background-color: #3E2948;
   transition: all 0.3s ease;
   height: 70px;
+  margin-top: 10px;
   padding: 0px 30px;
   display: flex;
   align-items: center;
@@ -27,8 +28,8 @@
 
 /* User Avatar */
 .navbar-wagon .avatar {
-  height: 45px;
-  width: 45px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
 }
 
@@ -98,18 +99,18 @@ flex: 0 0 9vw;
 text-align: right;
 }
 .avatar-dropdown {
-  height: 35px;
-  width: 35px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   z-index: 9999;
 }
 .title-navbar{
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #53435B;
+  color: #FBD157;
 }
 
 .dashboard {
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
 }
