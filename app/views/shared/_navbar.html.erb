@@ -9,24 +9,22 @@
     <div class="navbar-wagon-item">
       <div class="dropdown">
         <%= cl_image_tag current_user.photo , class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li>
-            <%= link_to edit_user_registration_path do %>
-            <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to "choose" do %>
-            <i class="fa fa-cog"></i>  <%= t(".choose", default: "Choose Event") %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to destroy_user_session_path, method: :delete do %>
-            <i class="fas fa-sign-out-alt"></i>
-            <%= t(".sign_out", default: "Log out") %>
-            <% end %>
-          </li>
-        </ul>
+             <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu layer">
+        <li> <%= link_to edit_user_registration_path do %>
+          <i class="fa fa-user"></i>         <%= t(".profile", default: "Edit profile") %>
+        <% end %></li>
+              <li> <%= link_to events_search_path do %>
+          <i class="far fa-calendar-alt"></i>         <%= t(".profile", default: "Join an event") %>
+        <% end %></li>
+        <li>              <%= link_to dashboards_path do %>
+          <i class="fa fa-cog"></i> <%= t(".choose", default: "Manage my events") %>
+        <% end %></li>
+        <li>
+          <%= link_to destroy_user_session_path, method: :delete do %>
+          <i class="fa fa-sign-out-alt"></i>  <%= t(".sign_out", default: "Log out") %>
+          <% end %>
+        </li>
+      </ul>
       </div>
     </div>
     <% else %>
@@ -40,22 +38,25 @@
   </div>
   <div class="navbar-wagon-item burger hidden-md hidden-lg">
     <% if current_user %>
-      <div class="dropdown">
-        <%= image_tag avatar_url(current_user) , class: "avatar-dropdown", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu layer">
-          <li> <%= link_to edit_user_registration_path do %>
-            <i class="fa fa-user"></i>         <%= t(".profile", default: "Profile") %>
-          <% end %></li>
-          <li>              <%= link_to "choose" do %>
-            <i class="fa fa-cog"></i> <%= t(".choose", default: "Choose Event") %>
-          <% end %></li>
-          <li>
-            <%= link_to destroy_user_session_path, method: :delete do %>
-            <i class="fa fa-sign-out-alt"></i>  <%= t(".sign_out", default: "Log out") %>
-            <% end %>
-          </li>
-        </ul>
-      </div>
+    <div class="dropdown">
+      <%= image_tag avatar_url(current_user) , class: "avatar-dropdown", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu layer">
+        <li> <%= link_to edit_user_registration_path do %>
+          <i class="fa fa-user"></i>         <%= t(".profile", default: "Edit profile") %>
+        <% end %></li>
+              <li> <%= link_to events_search_path do %>
+          <i class="far fa-calendar-alt"></i>        <%= t(".profile", default: "Join an event") %>
+        <% end %></li>
+        <li>              <%= link_to dashboards_path do %>
+          <i class="fa fa-cog"></i> <%= t(".choose", default: "Manage my events") %>
+        <% end %></li>
+        <li>
+          <%= link_to destroy_user_session_path, method: :delete do %>
+          <i class="fa fa-sign-out-alt"></i>  <%= t(".sign_out", default: "Log out") %>
+          <% end %>
+        </li>
+      </ul>
+    </div>
     <% end %>
   </div>
 </div>
