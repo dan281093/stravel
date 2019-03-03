@@ -34,13 +34,6 @@
   align-items: center;
 }
 
-.card-event-show1 {
-  border: 2px groove #FBD157;
-  margin: 7px;
-  padding: 17px 16px;
-  height: 120px;
-}
-
 .card-user-pic {
   display: flex;
   justify-content: space-between;
@@ -58,4 +51,18 @@
     position: relative;
     height: 30%;
     margin-top: 5px;
+}
+
+.card-events-show {
+  border: 2px groove #FBD157;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  height: 150px;
+  padding: 10px 50px;
+  text-align: center;
+  position: relative;
+  margin-top: 25px;
+    a {
+      text-decoration: none;
+      font-size: 16px;
+      color: white;}
 }

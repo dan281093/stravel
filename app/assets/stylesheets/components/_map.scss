@@ -13,12 +13,14 @@
   z-index: 40;
   background-color: #3E2948;
   position: fixed;
+  padding: 0px;
 }
 
 .map-container {
   position: fixed;
   top: 0;
-  width: 345px;
+  width: 100%;
+  right: 0;
   height: 325px;
   margin-top: 90px;
   z-index: 3;
