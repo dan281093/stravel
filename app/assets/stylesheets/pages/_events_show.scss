@@ -26,20 +26,37 @@ font-size: 35px;
   text-align: top;
 }
 
-.container.show {
-  min-height: calc(80vh - 66px);
+.card-event-show1 {
+  border: 2px groove #FBD157;
+  padding: 17px 16px;
+  height: 120px;
+  width: 100% ;
+  flex-grow: none;
 }
 
 .center-p {
   text-align: center;
   color: #FBEDE1;
+  position: relative;
 }
 
 .left-p {
-  position: relative;
   left: -100px;
-
+  img {
+    height: 35px;
+  }
 }
+
 .h3-choose{
   color: #fff;
+}
+
+.new-card {
+  display: flex;
+  margin: 10px ;
+  margin-left: 40px;
+  align-items: center;
+  p {
+    margin: 10px;
+  }
 }
