@@ -5,11 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-puts "destroying all user interests"
-UserInterest.destroy_all
-
-puts "destroying all interests!!!"
-Interest.destroy_all
 
 puts "destroying all users!!!"
 ## clear old users
@@ -84,27 +79,6 @@ interests = [
   { name: 'Electro', category: 'Party' },
   { name: 'Festivals', category: 'Party' }
 ]
-
-puts 'I am creating interests now!'
-Interest.create!(interests)
-
-upscale = Interest.find_by(name: 'Upscale')
-live_bars = Interest.find_by(name: 'Live Bars')
-electro = Interest.find_by(name: 'Electro')
-festivals = Interest.find_by(name: 'Festival')
-
-user_interest = [
-  { user: adam, interest: Interest.all.sample },
-  { user: don, interest: Interest.all.sample },
-  { user: eve, interest: Interest.all.sample }
-]
-
-puts 'I am creating user interests now!'
-UserInterest.create!(user_interest)
-
-interest1 = UserInterest.find_by(user: adam)
-interest2 = UserInterest.find_by(user: don)
-interest3 = UserInterest.find_by(user: eve)
 
 puts 'I am creating events now!'
 

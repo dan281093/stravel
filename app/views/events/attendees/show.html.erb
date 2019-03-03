@@ -7,18 +7,13 @@
   </div>
   <h3 class="title-attendees">About</h3>
   <p><%= @attendee.user.description %></p>
-  <h3 class="title-attendees">Hobbies & Interests</h3>
+  <h3 class="title-attendees">Event Interests</h3>
   <div class="row attendee-hobbies">
-    <p class="btn-test">Snowboarding</p>
-    <p class="btn-test">Hiking</p>
-  </div>
-  <div class="row attendee-hobbies">
-    <p class="btn-test">Manchester United</p>
-    <p class="btn-test">German Beer</p>
-  </div>
-  <div class="row attendee-hobbies">
-    <p class="btn-test">Surfing</p>
-    <p class="btn-test">Coding</p>
+    <% unless @attendee.user.activities.empty?  %>
+      <% @attendee.user.user_activities do |activity|  %>
+        <p class="btn-test"><%= @attendee.user.user_activities.activity.name %></p>
+      <% end %>
+    <% end %>
   </div>
 <% if @attendee.status == 'pending' %>
     <p><%= link_to "Accept", event_attendee_path(@event, @attendee, query: "Accept"), method: :patch, class: 'btn-approve' %></p>
