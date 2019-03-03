@@ -16,9 +16,9 @@ puts "destroying all events!!!"
 ## Clear all services
 Event.destroy_all
 
-
 puts "destroying all activities!!!"
 Activity.destroy_all
+
 
 users = [
   { first_name: 'Adam',

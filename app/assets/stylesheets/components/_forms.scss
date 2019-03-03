@@ -27,7 +27,7 @@ form {
       padding: 0;
     }
   }
-}
+
 
 .radio.btn.is-selected,
 .checkbox.btn.is-selected {
@@ -103,15 +103,10 @@ form {
     margin-top: 10px;
     margin-bottom: 4px;
     width: 50vw;
-    color: white;
   }
   select {
     color: white;
   }
-}
-
-.logo-stravel {
-  color: white;
 }
 
 .sign-up-form {
@@ -130,4 +125,5 @@ form {
     width: 25px;
     margin-left: -3px;
     }
+  }
 }
