@@ -7,26 +7,43 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-.container-map{
-  height: 450px;
+.container-map {
+  height: 397px;
   width: 100%;
   z-index: 40;
+  background-color: #3E2948;
+  position: fixed;
+}
 
-}
 .map-container {
-  position: relative;
+  position: fixed;
+  top: 0;
+  width: 345px;
+  height: 325px;
+  margin-top: 90px;
+  z-index: 3;
 }
- .card-event-design {
+
+.card-event-design {
   display: flex;
-  border: 2px groove #FBD157;
   margin: 15px;
   height: 100px;
   align-items: center;
   text-align: center;
   justify-content:center;
-   }
+}
 
-.map-p {
+.event-title {
+  font-size: 18px;
+  font-weight: bold;
   color: #FBEDE1;
 }
 
+.event-details {
+  font-size: 12px;
+  margin: 8px;
+}
+
+.filler {
+  height: 385px;
+}
