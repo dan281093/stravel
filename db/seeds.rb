@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts 'attendees will die'
+Attendee.destroy_all
 
 puts "destroying all users!!!"
 ## clear old users
@@ -91,7 +93,8 @@ Event.create!(
   host: adam,
   address: 'Levinsky 39, Tel Aviv-Yafo',
   activity: party,
-  date: '2019-04-04'
+  date: '2019-04-04',
+  time: '2:00'
 )
 
 Event.create!(
@@ -103,7 +106,8 @@ Event.create!(
   host: don,
   address: 'HaYarkon St 19, Tel Aviv-Yafo',
   activity: party,
-  date: '2019-04-04'
+  date: '2019-04-04',
+  time: '1:00'
 )
 
 Event.create!(
@@ -115,7 +119,8 @@ Event.create!(
   host: don,
   address: 'Dizengoff St 50, Tel Aviv-Yafo',
   activity: shopping,
-  date: '2019-04-04'
+  date: '2019-04-04',
+  time: '11:00'
 )
 
 Event.create!(
@@ -126,7 +131,8 @@ Event.create!(
   host: eve,
   address: 'Dizengoff St 50, Tel Aviv-Yafo',
   activity: cinema,
-  date: '2019-04-04'
+  date: '2019-04-04',
+  time: '21:00'
 )
 
 event1 = Event.find_by(title: 'Night Out at Mondo 2000')
