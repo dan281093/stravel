@@ -5,7 +5,7 @@
           <div
             id="map"
             style="width: 100%;
-            height: 400px;"
+            height: 325px;"
             data-markers="<%= @markers.to_json %>"
             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
           </div>
@@ -14,39 +14,23 @@
     </div>
 </div>
   <div class="container">
+    <div class="filler"></div>
     <div class="row">
       <% @events.each do |event| %>
         <div class="card-dashboard card-event-show1">
           <%= link_to event_path(event) do %>
             <div class="card-center">
-              <div class="card-event-design">
                 <div class="card">
-                  <p class="map-p"><%= event.title %></p>
-                  <p> <%= event.date %></p>
-                  <p> <%= event.address %></p>
+                  <p class="event-title"><%= event.title %></p>
+                  <p class="event-details"> <%= event.address %></p>
                 </div>
-              </div>
-            </div>
           <% end %>
-            <p class="small-margin">
-              <%= event.address %>
-            </p>
+            </div>
             <div class="activity-date">
-              <p><%= event.activity.name.upcase %></p>
-              <p><%= event.date %></p>
+              <p class="event-details"><%= event.activity.name.upcase %></p>
+              <p class="event-details"><%= event.date %></p>
             </div>
         </div>
       <% end %>
     </div>
   </div>
-  <div class="container">
-    <div class="row">
-    <%= link_to events_path do %>
-      <div class="text-center">
-        <button class="apply-button">
-          Apply
-        </button>
-      </div>
-    </div>
-    <% end %>
-   </div>
