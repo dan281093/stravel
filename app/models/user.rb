@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :user_activities
   has_many :activities, through: :user_activities
 
-  has_many :attendees
+  has_many :attendees, dependent: :destroy
   has_many :events, through: :attendees
 
   mount_uploader :photo, PhotoUploader
