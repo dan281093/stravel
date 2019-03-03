@@ -57,6 +57,29 @@
   margin-top: 40px;
 }
 
+.status-decline{
+  color: #F1829F;
+  font-weight: bold;
+  font-style: italic;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.status-approve{
+  color:#B0DB72;
+  font-weight: bold;
+  font-style: italic;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.btn-pending {
+  color: #FBD157;
+  font-weight: bold;
+  font-style: italic;
+  font-weight: lighter;
+  text-align: center;
+}
 .attendee-avatar {
   width: 160px;
   height: 160px;
@@ -88,4 +111,9 @@
   padding: 10px;
   display: flex;
   justify-content: space-around;
+}
+.inline-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
