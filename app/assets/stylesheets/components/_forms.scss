@@ -35,7 +35,7 @@ form {
   label {
     color: white;
   }
-}
+
 
 .new-events-form {
   text-align: left;
@@ -67,19 +67,8 @@ form {
 .form-inputs input {
   display: flex;
 }
+
 .form-inputs textarea {
-  display: flex;
-}
-
-.user_birth_date_1i {
-  display: flex;
-}
-
-.user_birth_date_2i {
-  display: flex;
-}
-
-.user_birth_date_3i {
   display: flex;
 }
 
@@ -88,18 +77,18 @@ form {
   background-color: #ED9153;
   border: none;
   color: white;
-  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   border-radius: 15px;
   transition: 0.6s ease;
-  width: 150px;
-  height: 54px;
+  width: 95px;
+  height: 37px;
   }
+.hint {
+  color: red;
 }
-
 
 .time-picker {
     color: black !important;
@@ -123,7 +112,6 @@ form {
   //   display: flex;
   //   justify-content: center;
   // }
-}
 
 .logo-stravel {
   color: white;
@@ -146,4 +134,3 @@ form {
     width: 25px;
     margin-left: -3px;
     }
-}

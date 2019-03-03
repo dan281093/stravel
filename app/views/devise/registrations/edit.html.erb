@@ -37,17 +37,21 @@
     <%= f.input :birth_date,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "email" }%>
+                input_html: { autocomplete: "Date of birth: " }%>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
-  </div>
-<% end %>
+
 <%= link_to "Edit my activities", bulk_edit_user_activities_path %>
 
-<h3>Cancel my account</h3>
+<h4 class="cancel">Cancel my account</h4>
 
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+<p class="cancel">Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+ <div class="form-actions">
+<ul class="pager">
+  <li>
+    <%= f.button :submit, "Update" %>
+  <% end %>
+</li>
+  <li><%= link_to "Back", :back %></li>
+</ul>
+</div>
