@@ -106,3 +106,31 @@ form {
     background: white !important;
 }
 
+.signin-form {
+  // display: flex;
+  // justify-content: center;
+  width: 60vw;
+  input {
+    margin-top: 10px;
+    margin-bottom: 4px;
+    width: 50vw;
+    color: white;
+  }
+  select {
+    color: white;
+  }
+  // label {
+  //   display: flex;
+  //   justify-content: center;
+  // }
+}
+
+.logo-stravel {
+  color: white;
+}
+
+.sign-up-form {
+  text-align: center;
+  font-size: 30px;
+  font-style: italic;
+}
