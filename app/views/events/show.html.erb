@@ -28,11 +28,11 @@
     </div>
     <% if current_user == @host %>
     <div class="small-margin">
-      <%= link_to "Manage attendees", event_attendees_path(@event),  class: "add-button" %>
+      <%= link_to "Manage Attendees", event_attendees_path(@event),  class: "add-button" %>
       <%= link_to "Edit my Event", edit_event_path(@event),  class: "add-button" %>
       <%= link_to "Delete this Event", event_path(@event), method: :delete, class: "add-button" %>
       <% else %>
-      <%= link_to "Join this event", event_attendees_path(@event), method: :post,  class: "add-button small-margin" %>
+      <%= link_to "Join this Event", event_attendees_path(@event), method: :post,  class: "add-button small-margin" %>
     </div>
     <% end %>
   </div>
