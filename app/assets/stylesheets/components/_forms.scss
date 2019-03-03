@@ -71,18 +71,6 @@ form {
   display: flex;
 }
 
-.user_birth_date_1i {
-  display: flex;
-}
-
-.user_birth_date_2i {
-  display: flex;
-}
-
-.user_birth_date_3i {
-  display: flex;
-}
-
 .form-actions {
   input {
   background-color: #ED9153;
@@ -107,33 +95,3 @@ form {
     background: white !important;
 }
 
-.cancel{
-  color: #F5595A;
-}
-
-#user_birth_date_1i {
-  margin-top: 12px;
-  background-color: white;
-}
-
-#user_birth_date_2i {
-  background-color: white;
-}
-
-#user_birth_date_3i {
-  background-color: white;
-}
-
-#user_photo {
-  background-color: white;
-  justify-content: center;
-}
-.date-required {
-  margin-right: 1px;
-}
-.error {
-  color: red;
-}
-#user_description {
-  width: 100%;
-}
