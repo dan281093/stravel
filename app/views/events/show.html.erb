@@ -2,35 +2,37 @@
   <div class="h2-choose small-margin text-center">
     <%= @event.title %>
   </div>
+  <br>
+    <div class="card-event-show">
+      <%= image_tag avatar_url(@event.host), class: 'card-avatar-show' %>
+      <h2 class="small-text"><%= @event.host.first_name %></h2>
+    </div>
+  <br>
+    </div>
 
   <div class="row">
-    <div class="col-xs-12 card-center small-margin">
-      <div class="card-event-show1 ">
-        <p class="left-p">Location</p><br>
-        <div class="card">
-          <p class="center-p"><%= @event.address %></p>
-        </div>
+    <div class="new-card">
+      <p class="left-p"> <%= image_tag "icons/localisation.svg" %></p>
+      <p class="center-p"><%= @event.address %></p>
+    </div>
+      <div class="new-card">
+        <p class="left-p"> <%= image_tag "icons/calendar.svg" %></p>
+        <p class="center-p"><%= @event.date %></p>
       </div>
     </div>
-    <br>
-    <div class="col-xs-12 card-center small-margin">
-      <div class="card-event-show1">
-          <%= image_tag avatar_url(@event.host), class: 'card-avatar' %>
-          <h2 class="small-text"><%= @event.host.first_name %></h2>
-      </div>
+
+
+  <div class="col-xs-12 card-center small-margin">
+    <div class="card-event-show1">
+      <p class="center-p"><%= @event.description %></p>
     </div>
-    <br>
-    <div class="col-xs-12 card-center small-margin">
-      <div class="card-event-show1">
-        <p class="center-p"><%= @event.description %></p>
-      </div>
-      <% if current_user == @host %>
-  <%= link_to "Manage attendees", event_attendees_path(@event),  class: "add-button" %>
-  <%= link_to "Edit my Event", edit_event_path(@event),  class: "add-button" %>
-  <%= link_to "Delete this Event", event_path(@event), method: :delete, class: "add-button" %>
-  <% else %>
-  <%= link_to "Join this event", event_attendees_path(@event), method: :post,  class: "add-button small-margin" %>
-  <% end %>
-    </div>
+    <% if current_user == @host %>
+    <%= link_to "Manage attendees", event_attendees_path(@event),  class: "add-button" %>
+    <%= link_to "Edit my Event", edit_event_path(@event),  class: "add-button" %>
+    <%= link_to "Delete this Event", event_path(@event), method: :delete, class: "add-button" %>
+    <% else %>
+    <%= link_to "Join this event", event_attendees_path(@event), method: :post,  class: "add-button small-margin" %>
+    <% end %>
   </div>
+</div>
 </div>
