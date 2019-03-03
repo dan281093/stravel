@@ -16,16 +16,17 @@
   <div class="container">
     <div class="row">
       <% @events.each do |event| %>
-        <div class="col-xs-12">
+        <div class="card-dashboard card-event-show1">
           <%= link_to event_path(event) do %>
-            <div class="card-center">
-              <div class="card-event-design">
-                <div class="card">
-                  <p class="map-p"><%= event.title %></p>
-                </div>
-              </div>
-            </div>
+            <%= event.title %>
           <% end %>
+            <p class="small-margin">
+              <%= event.address %>
+            </p>
+            <div class="activity-date">
+              <p><%= event.activity.name.upcase %></p>
+              <p><%= event.date %></p>
+            </div>
         </div>
       <% end %>
     </div>

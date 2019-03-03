@@ -35,10 +35,10 @@
 }
 
 .card-event-show1 {
-  border: 2px groove rgba(28,110,164,0.18);
-  margin: 7px;
-  padding: 17px 16px;
-  height: 120px;
+  color: white;
+  a {
+    color: white !important;
+  }
 }
 // Card with avatar
 
