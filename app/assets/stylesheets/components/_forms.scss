@@ -35,7 +35,7 @@ form {
   label {
     color: white;
   }
-}
+
 
 .new-events-form {
   text-align: left;
@@ -67,6 +67,7 @@ form {
 .form-inputs input {
   display: flex;
 }
+
 .form-inputs textarea {
   display: flex;
 }
@@ -85,7 +86,6 @@ form {
   width: 95px;
   height: 37px;
   }
-}
 .hint {
   color: red;
 }
@@ -95,3 +95,42 @@ form {
     background: white !important;
 }
 
+.signin-form {
+  // display: flex;
+  // justify-content: center;
+  width: 60vw;
+  input {
+    margin-top: 10px;
+    margin-bottom: 4px;
+    width: 50vw;
+    color: white;
+  }
+  select {
+    color: white;
+  }
+  // label {
+  //   display: flex;
+  //   justify-content: center;
+  // }
+
+.logo-stravel {
+  color: white;
+}
+
+.sign-up-form {
+  text-align: center;
+  font-size: 30px;
+  font-style: italic;
+}
+
+
+.boolean.optional {
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+    input {
+    position: relative;
+    width: 25px;
+    margin-left: -3px;
+    }
