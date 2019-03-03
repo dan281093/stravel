@@ -134,3 +134,16 @@ form {
   font-size: 30px;
   font-style: italic;
 }
+
+
+.boolean.optional {
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+    input {
+    position: relative;
+    width: 25px;
+    margin-left: -3px;
+    }
+}
