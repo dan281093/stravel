@@ -98,8 +98,6 @@ form {
 }
 
 .signin-form {
-  // display: flex;
-  // justify-content: center;
   width: 60vw;
   input {
     margin-top: 10px;
@@ -110,18 +108,12 @@ form {
     color: white;
   }
 }
-  // label {
-  //   display: flex;
-  //   justify-content: center;
-  // }
-
 
 .sign-up-form {
   text-align: center;
   font-size: 30px;
   font-style: italic;
 }
-
 
 .boolean.optional {
   position: relative;
