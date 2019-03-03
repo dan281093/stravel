@@ -7,4 +7,8 @@ class Event < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
 
   validates :activity, :title, :address, :description, presence: true, if: :active?
+
+  def attendee(user)
+    attendees.where(user: user).first
+  end
 end

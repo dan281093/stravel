@@ -7,25 +7,27 @@
     <!-- Links when logged in -->
     <!-- Avatar with dropdown menu -->
     <div class="navbar-wagon-item">
+      <% if current_user %>
       <div class="dropdown">
-        <%= cl_image_tag current_user.photo , class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-             <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu layer">
-        <li> <%= link_to edit_user_registration_path do %>
-          <i class="fa fa-user"></i>         <%= t(".profile", default: "Edit Profile") %>
-        <% end %></li>
-              <li> <%= link_to choose_path do %>
-          <i class="far fa-calendar-alt"></i>         <%= t(".profile", default: "Join Event") %>
-        <% end %></li>
-        <li>              <%= link_to dashboards_path do %>
-          <i class="fa fa-cog"></i> <%= t(".choose", default: "Dashboard") %>
-        <% end %></li>
-        <li>
-          <%= link_to destroy_user_session_path, method: :delete do %>
-          <i class="fa fa-sign-out-alt"></i>  <%= t(".sign_out", default: "Log out") %>
-          <% end %>
-        </li>
-      </ul>
+        <%= image_tag avatar_url(current_user) , class: "avatar-dropdown", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu layer">
+          <li> <%= link_to edit_user_registration_path do %>
+            <i class="fa fa-user"></i>         <%= t(".profile", default: "Edit profile") %>
+          <% end %></li>
+          <li> <%= link_to events_search_path do %>
+            <i class="far fa-calendar-alt"></i>        <%= t(".profile", default: "Join an event") %>
+          <% end %></li>
+          <li>              <%= link_to dashboards_path do %>
+            <i class="fa fa-cog"></i> <%= t(".choose", default: "Manage my events") %>
+          <% end %></li>
+          <li>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+            <i class="fa fa-sign-out-alt"></i>  <%= t(".sign_out", default: "Log out") %>
+            <% end %>
+          </li>
+        </ul>
       </div>
+      <% end %>
     </div>
     <% else %>
     <!-- Login link (when logged out) -->
@@ -41,8 +43,8 @@
         <li> <%= link_to edit_user_registration_path do %>
           <i class="fa fa-user"></i>         <%= t(".profile", default: "Edit Profile") %>
         <% end %></li>
-              <li> <%= link_to choose_path do %>
-          <i class="far fa-calendar-alt"></i>        <%= t(".profile", default: "Join Event") %>
+        <li> <%= link_to events_search_path do %>
+          <i class="far fa-calendar-alt"></i>        <%= t(".profile", default: "Join an event") %>
         <% end %></li>
         <li>              <%= link_to dashboards_path do %>
           <i class="fa fa-cog"></i> <%= t(".choose", default: "Dashboard") %>

@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2019_03_02_135316) do
   end
 
   create_table "attendees", force: :cascade do |t|
-    t.string "status"
+    t.integer "status", default: 0, null: false
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -47,13 +47,6 @@ ActiveRecord::Schema.define(version: 2019_03_02_135316) do
     t.index ["host_id"], name: "index_events_on_host_id"
   end
 
-  create_table "interests", force: :cascade do |t|
-    t.string "category"
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "user_activities", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "activity_id"
@@ -61,15 +54,6 @@ ActiveRecord::Schema.define(version: 2019_03_02_135316) do
     t.datetime "updated_at", null: false
     t.index ["activity_id"], name: "index_user_activities_on_activity_id"
     t.index ["user_id"], name: "index_user_activities_on_user_id"
-  end
-
-  create_table "user_interests", force: :cascade do |t|
-    t.bigint "interest_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "user_id"
-    t.index ["interest_id"], name: "index_user_interests_on_interest_id"
-    t.index ["user_id"], name: "index_user_interests_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -94,6 +78,4 @@ ActiveRecord::Schema.define(version: 2019_03_02_135316) do
   add_foreign_key "events", "activities"
   add_foreign_key "user_activities", "activities"
   add_foreign_key "user_activities", "users"
-  add_foreign_key "user_interests", "interests"
-  add_foreign_key "user_interests", "users"
 end

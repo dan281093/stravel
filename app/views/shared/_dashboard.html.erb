@@ -2,33 +2,44 @@
   <div class="title-bold-big small-margin">
     Dashboard
   </div>
-  <h3 class="title-light-big">Future Events</h3>
-    <% current_user.events.each do |event| %>
-  <div class="card-dashboard">
-    <%= link_to event_path(event) do %>
-      <%= event.title %>
-      <p class="small-margin"><%= event.address %></p>
-      <div class="activity-date">
-        <p><%= event.activity.name.upcase %></p>
-        <p><%= event.date %></p>
-      </div>
-  </div>
+  <h3 class="title-light-big">Upcoming Events</h3>
+  <% if @upcoming_events.empty? %>
+    <p class="empty-message">You are not attending any events yet</p>
+  <% else %>
+  <% @upcoming_events.each do |event| %>
+    <div class="card-dashboard <%= event.attendee(current_user).status %>">
+      <%= link_to event_path(event) do %>
+        <%= event.title %>
+        <p class="small-margin"><%= event.address %></p>
+        <div class="activity-date">
+          <p><%= event.activity.name.upcase %></p>
+          <p><%= event.date %></p>
+        </div>
+          <div class="status"><%= event.attendee(current_user).status.capitalize %></div>
       <% end %>
-    <% end %>
+    </div>
+  <% end %>
+  <% end %>
+
   <h3 class="title-light-big">Events I am Hosting</h3>
-    <% @events.where(host_id: current_user.id).each do |event| %>
-  <div class="card-dashboard">
-    <%= link_to event_path(event) do %>
-      <%= event.title %>
-      <p class="small-margin"><%= event.address %></p>
-      <div class="activity-date">
-        <p><%= event.activity.name.upcase %></p>
-        <p><%= event.date %></p>
-      </div>
-  </div>
-      <% end %>
+  <% if @hosted_events.empty? %>
+  <p class="empty-message">You are not hosting any events yet</p>
+  <% else %>
+    <% @hosted_events.each do |event| %>
+      <div class="card-dashboard-hosting">
+        <%= link_to event_path(event) do %>
+          <%= event.title %>
+          <p class="small-margin"><%= event.address %></p>
+          <div class="activity-date">
+            <p><%= event.activity.name.upcase %></p>
+            <p><%= event.date %></p>
+          </div>
+         <% end %>
+       </div>
     <% end %>
+    <% end %>
+
     <div class="start-over">
-      <%= link_to "Start Again", choose_path, class: "btn btn-primary button-event-signin" %>
+      <%= link_to "Find another event", choose_path, class: "btn btn-primary button-event-signup" %>
     </div>
 </div>
