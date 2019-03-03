@@ -1,5 +1,5 @@
 .mapboxgl-popup {
-  max-width: 200px;
+  max-width: 300px;
 }
 
 .mapboxgl-popup-content {
@@ -8,7 +8,8 @@
 }
 
 .container-map{
-  height: 250px;
+  height: 450px;
+  width: 100%;
   z-index: 40;
 
 }
@@ -17,7 +18,7 @@
 }
  .card-event-design {
   display: flex;
-  border: 2px groove rgba(28,110,164,0.18);
+  border: 2px groove #FBD157;
   margin: 15px;
   height: 100px;
   align-items: center;
@@ -29,12 +30,3 @@
   color: #FBEDE1;
 }
 
-.apply-button {
-  background-color: #FACF5A;
-  border: none;
-  color: #FBEDE1;
-  vertical-align: center;
-  padding: 15px 32px;
-  font-size: 16px;
-  border-radius: 15px;
-}

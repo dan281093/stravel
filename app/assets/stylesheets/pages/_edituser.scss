@@ -1,0 +1,12 @@
+#edit_user{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.input input{
+  width: 100%;
+}
+.hint{
+  font-size: 13px;
+}
