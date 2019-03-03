@@ -22,7 +22,9 @@ class EventsController < ApplicationController
   end
 
   def destroy
-    @event = Event.destroy
+    @event = Event.find(params[:id])
+    @event.destroy
+    redirect_to dashboards_path
   end
 
   def create
