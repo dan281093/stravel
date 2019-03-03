@@ -1,7 +1,6 @@
 class DashboardsController < ApplicationController
   def index
-    @events = Event.all
-    @hosted_events = current_user.hosted_events
-    @upcoming_events = current_user.upcoming_events
+    @hosted_events = current_user.hosted_events.where.not(active: false)
+    @upcoming_events = current_user.upcoming_events.where.not(active: false)
   end
 end

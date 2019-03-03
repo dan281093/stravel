@@ -11,6 +11,8 @@ class Events::AttendeesController < ApplicationController
 
   def create
     @event = Event.find(params[:event_id])
+    @event.active = true
+    @event.save
     @attendee = Attendee.new(user_id: current_user.id, event_id: @event.id, status: 'pending')
     @attendee.save
     redirect_to dashboards_path
