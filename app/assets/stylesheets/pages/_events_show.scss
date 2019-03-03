@@ -48,6 +48,7 @@ font-size: 35px;
   text-align: center;
   color: #FBEDE1;
   position: relative;
+  margin-top: auto;
 }
 
 .left-p {
@@ -64,10 +65,9 @@ font-size: 35px;
 
 .new-card {
   display: flex;
-  margin: 10px ;
   margin-left: 40px;
   align-items: center;
   p {
-    margin: 10px;
+    margin: 7px;
   }
 }
