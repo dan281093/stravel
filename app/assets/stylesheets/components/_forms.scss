@@ -88,15 +88,14 @@ form {
   background-color: #ED9153;
   border: none;
   color: white;
-  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   border-radius: 15px;
   transition: 0.6s ease;
-  width: 150px;
-  height: 54px;
+  width: 95px;
+  height: 37px;
   }
 }
 .hint {
@@ -110,4 +109,31 @@ form {
 
 .cancel{
   color: #F5595A;
+}
+
+#user_birth_date_1i {
+  margin-top: 12px;
+  background-color: white;
+}
+
+#user_birth_date_2i {
+  background-color: white;
+}
+
+#user_birth_date_3i {
+  background-color: white;
+}
+
+#user_photo {
+  background-color: white;
+  justify-content: center;
+}
+.date-required {
+  margin-right: 1px;
+}
+.error {
+  color: red;
+}
+#user_description {
+  width: 100%;
 }
