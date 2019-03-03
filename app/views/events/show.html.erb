@@ -3,12 +3,10 @@
     <%= @event.title %>
   </div>
   <br>
-  <div class="card-center ">
-    <div class="card-event-show1">
-      <%= image_tag avatar_url(@event.host), class: 'card-avatar' %>
+    <div class="card-event-show">
+      <%= image_tag avatar_url(@event.host), class: 'card-avatar-show' %>
       <h2 class="small-text"><%= @event.host.first_name %></h2>
     </div>
-  </div>
   <br>
     </div>
 

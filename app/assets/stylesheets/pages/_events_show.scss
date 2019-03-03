@@ -34,6 +34,16 @@ font-size: 35px;
   flex-grow: none;
 }
 
+.card-event-show {
+  display: flex;
+  padding: 17px 16px;
+  height: 120px;
+  width: 100% ;
+  img {
+      margin-right: 20px;
+  }
+}
+
 .center-p {
   text-align: center;
   color: #FBEDE1;

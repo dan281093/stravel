@@ -16,7 +16,7 @@
   margin: 15px 10px;
   border-style: solid;
   border-color: white;
-  box-shadow: 4px 4px 7px #FBD157;
+  box-shadow: 2px 2px 3px #FBD157;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 200;
@@ -47,6 +47,12 @@
   border-radius: 60%;
   position: absolute;
   right: 35px;
+}
+
+.card-avatar-show {
+  width: 80px;
+  height: 80px;
+  border-radius: 60%;
 }
 
 .cards img {
