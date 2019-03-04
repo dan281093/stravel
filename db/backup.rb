@@ -24,7 +24,7 @@ users = [
   { first_name: 'Adam',
     last_name: 'Black',
     email: 'adam@test.com',
-    description: "Hi! I'm Adam. I'm 31 years old. I work as accountent and I love to go out and meet new people",
+    description: "Hi! I'm Adam and I would love to go out with you!",
     password: '123456',
     birth_date: '1987-4-23',
     remote_photo_url: "https://picsum.photos/200"
@@ -33,16 +33,16 @@ users = [
     first_name: 'Eve',
     last_name: 'Mendona',
     email: 'eve@test.com',
-    description: "Hi! I'm Eve I'm mixologist would loves to wind down girl afterwork. Low-key and drama free.",
+    description: "Hi! I'm Eve and I would love to go out with you!",
     password: '123456',
     birth_date: '1990-8-15',
     remote_photo_url: "https://picsum.photos/200"
   },
   {
     first_name: 'Donald',
-    last_name: 'Johnson',
+    last_name: 'Trump',
     email: 'don@test.com',
-    description: "Hi! I'm Donald own a boat rental pier and give fun tours during the day. I'm always down for a night outdoors",
+    description: "Hi! I'm Donald and I would love to go out with you!",
     password: '123456',
     birth_date: '1990-8-15',
     remote_photo_url: "https://picsum.photos/200"
@@ -86,8 +86,8 @@ puts 'I am creating events now!'
 
 Event.create!(
   title: 'Night Out at Mondo 2000',
-  description: "Mondo 2000 hosts awesome Saturday Night parties as well as theme nights and is always better in a group.
-  ",
+  description: "Mondo 2000 hosts awesome Saturday Night parties.
+  I'm looking forward to meeting a lot of fun people there!",
   latitude: 31.7811283,
   longitude: 35.2157765,
   host: adam,
@@ -98,70 +98,21 @@ Event.create!(
 )
 
 Event.create!(
-  title: 'Silent trance party at Meir Garden',
-  description: "Come dance the night away at DJ Envy's Bluetooth Bash in the park. 50nis deposit for headphone rental.",
-  latitude: 32.072774,
-  longitude: 34.773843,
+  title: 'Casual Beach Hangout',
+  description: "Let's all meet at Banana Beach for some volleyball
+  and a few drinks in the sun",
+  latitude: 32.0696247,
+  longitude: 34.7630231,
   host: don,
-  address: 'King George St 35, Tel Aviv-Yafo',
+  address: 'HaYarkon St 19, Tel Aviv-Yafo',
   activity: party,
   date: '2019-04-04',
   time: '1:00'
 )
 
 Event.create!(
-  title: 'Casual Beach Hangout',
-  description: "Let's all meet at Banana Beach for some volleyball, BBQ
-  and a drinks till dawn.",
-  latitude: 32.0696247,
-  longitude: 34.7630231,
-  host: don,
-  address: 'HaYarkon St 19, Tel Aviv-Yafo',
-  activity: beach,
-  date: '2019-04-04',
-  time: '1:00'
-)
-
-
-Event.create!(
-  title: 'Jerusalem Beach Tiki Party',
-  description: "Lets take over the Beach with a impromt to Tiki Party. Will provide the grill and Tiki accesories. Dress in your favorite island wear.",
-  latitude: 32.073676,
-  longitude: 34.764441,
-  host: don,
-  address: 'Retsif Herbert Samuel St 58, Tel Aviv-Yafo',
-  activity: beach,
-  date: '2019-04-04',
-  time: '1:00'
-)
-
-Event.create!(
-  title: 'Nagila and New Wave',
-  description: "Come check out our New Wave night at Raffikis Nagila and grill.",
-  latitude: 32.080414,
-  longitude: 34.767204,
-  host: don,
-  address: 'Shlomo Lahat Promenade 17. Tel Aviv-Yafo',
-  activity: lounge,
-  date: '2019-04-04',
-  time: '11:00'
-)
-
-Event.create!(
-  title: 'Best of Blues Tribute',
-  description: "Come check out the best blues artist in Tel Aviv covering their favorite songs.",
-  latitude: 32.077523,
-  longitude: 34.766293,
-  host: don,
-  address: 'Retsif Herbert Samuel St 94, Tel Aviv-Yafo',
-  activity: lounge,
-  date: '2019-04-04',
-  time: '11:00'
-)
-
-Event.create!(
   title: 'Shopping at Dizengoff Mall',
-  description: "Who wants to go shopping? I always have issues picking what fits.
+  description: "I would like to do some fashion shopping today.
   Anyone wants to join me?",
   latitude: 32.0754357,
   longitude: 34.7757615,
@@ -174,7 +125,7 @@ Event.create!(
 
 Event.create!(
   title: 'A Star is Born',
-  description: "Who wants to check out the Master of Horror marathon on the big screen. ",
+  description: "Who wants to join me for this awesome movie?",
   latitude: 32.0843995,
   longitude: 34.774258,
   host: eve,
@@ -188,8 +139,5 @@ event1 = Event.find_by(title: 'Night Out at Mondo 2000')
 event2 = Event.find_by(title: 'Casual Beach Hangout at Banana Beach')
 event3 = Event.find_by(title: 'Shopping at Dizengoff Mall')
 event4 = Event.find_by(title: 'A Star is Born')
-event5 = Event.find_by(title: 'Silent trance party at Meir Garden')
-event6 = Event.find_by(title: 'Jerusalem Beach Tiki Party')
-event7 = Event.find_by(title: 'Nagila and New Wave')
-event8 = Event.find_by(title: 'Best of Blues Tribute')
+
 puts 'done making seeds!'
