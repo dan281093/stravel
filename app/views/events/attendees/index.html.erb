@@ -2,7 +2,6 @@
   <div class="title-bold-big small-margin">
     <%= @event.title %>
   </div>
-
   <% if @attendees.empty? %>
   <br>
     <p class="message-empty-attendees">So far nobody has applied to your events...</p>
@@ -10,17 +9,11 @@
   <% else %>
   <h3 class="title-attendees">The following people are interested in your events!</h3>
     <% @attendees.each do |attendee| %>
-  <div class="card-attendees">
-    <div class="row attendees">
-      <h1><%= link_to attendee.user.first_name + " " + attendee.user.last_name, event_attendee_path(@event, attendee) %></h1>
-    </div>
-    <div class="row attendees">
-      <% if attendee.status == 'accepted' %>
-        <p class='status-approve'><%= attendee.status %></p>
-      <% elsif attendee.status == 'declined'%>
-        <p class='status-decline'><%= attendee.status %></p>
-      <% else %>
-        <p class='btn-pending'><%= attendee.status %></p>
+    <%= link_to event_attendee_path(@event, attendee) do %>
+        <div class="card-dashboard <%= attendee.status %> attendees-managing">
+          <%= image_tag avatar_url(attendee.user), class: 'card-avatar-show' %>
+          <h2 class="small-text"><%= "#{attendee.user.first_name} #{attendee.user.last_name}, #{((Time.zone.now - attendee.user.birth_date.to_time) / 1.year.seconds).floor}" %></h2>
+        </div>
       <% end %>
     <% end %>
     </div>
