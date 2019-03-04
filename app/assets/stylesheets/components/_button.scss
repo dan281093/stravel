@@ -44,7 +44,7 @@
   height: 54px;
 }
 
-.button-event-signin:hover{
+.button-event-signin:hover {
   background-color: #ee965b;
 }
 
@@ -64,7 +64,7 @@
   margin: 10px;
 }
 
-.button-event-signup:hover{
+.button-event-signup:hover {
   background-color: #9b361d;
 }
 
@@ -132,8 +132,8 @@
 }
 
 .medium-margin {
-  margin-top: 60px;
-}
+    margin-top: 60px !important;
+  }
 
 .big-margin {
   margin-top: 150px !important;

@@ -1,12 +1,12 @@
 <div class="container show">
-  <div class="title-bold-big small-margin">
+  <div class="title-attendee-name">
     <%= @attendee.user.first_name + " " + @attendee.user.last_name %>
   </div>
   <div class="row attendee-center">
     <%= image_tag avatar_url(@attendee.user), class: 'attendee-avatar' %>
   </div>
   <h3 class="title-attendees">About</h3>
-  <p><%= @attendee.user.description %></p>
+  <p class="description"><%= @attendee.user.description %></p>
   <h3 class="title-attendees">Event Interests</h3>
   <div class="row attendee-hobbies">
     <% unless @attendee.user.activities.empty?  %>
@@ -24,7 +24,7 @@
       <% if @attendee.status == 'accepted' %>
         <p class='btn-approve'><%= @attendee.status %></p>
         <%= link_to event_attendee_path(@event, @attendee, query:"Decline"), method: :patch do %>
-          <i class="far fa-trash-alt"></i>
+          <i class="far fa-trash-alt trashcan"></i>
         <% end %>
       <% else %>
         <p class='btn-decline'><%= @attendee.status %></p>
