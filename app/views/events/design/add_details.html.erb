@@ -19,10 +19,10 @@
               <%= f.input :date, html5: true, required: true, label: 'Date' %>
               </div>
               <div class="form-space flex-inline">
-              <%= f.input :time, required: true, label: 'Time',input_html: { class: 'time-picker' } %>
+              <%= f.input :time, required: true, label: 'Time', input_html: { class: 'time-picker' } %>
               </div>
-              <div class="form-space button-event small-margin">
-              <%= f.submit "Continue" %>
+              <div class="form-space">
+              <%= f.submit "Continue", class: 'button-event' %>
               </div>
             <% end %>
           </div>

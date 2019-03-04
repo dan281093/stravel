@@ -21,7 +21,7 @@
     </div>
     <div class="new-card">
       <p class="left-p"> <%= image_tag "icons/time.svg" %></p>
-      <p class="center-p"><%= @event.time %></p>
+      <p class="center-p"><%= @event.time.strftime('%H:%M') %></p>
     </div>
   </div>
 
