@@ -2,6 +2,12 @@
   <div class="title-bold-big small-margin">
     <%= @event.title %>
   </div>
+
+  <% if @attendees.empty? %>
+  <br>
+    <p class="message-empty-attendees">So far nobody has applied to your events...</p>
+    <p class="center-p">  <%= image_tag('icons/group.svg', size: "200x200") %> </p>
+  <% else %>
   <h3 class="title-attendees">The following people are interested in your events!</h3>
     <% @attendees.each do |attendee| %>
   <div class="card-attendees">
@@ -20,3 +26,4 @@
     </div>
   </div>
 </div>
+<% end %>

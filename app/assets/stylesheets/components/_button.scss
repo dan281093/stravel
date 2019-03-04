@@ -113,7 +113,7 @@
     border-radius: 15px;
     transition: 0.4s ease;
     width: 150px;
-  }
+}
 
 .button-join:hover {
   background-color: #FBD157 ;
@@ -126,17 +126,18 @@
   border-color:#ED9153 !important;
   border: solid 0.5px;
 }
-  .small-margin {
-    margin-top: 30px;
-  }
 
-  .medium-margin {
+.small-margin {
+  margin-top: 30px;
+}
+
+.medium-margin {
     margin-top: 60px !important;
   }
 
-  .big-margin {
-    margin-top: 150px !important;
-  }
+.big-margin {
+  margin-top: 150px !important;
+}
 
 .apply-button {
   background-color: #ED9153;
@@ -161,8 +162,23 @@
   margin-bottom: 10px;
   width: 225px;
   height: 50px;
+  transition: 0.6s ease;
   &:active {
     text-decoration: none !important;
     color: white !important;
+  }
+  &:hover {
+    background-color: #FBD157;
+    opacity: 1;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.signinpage-buttonsignup {
+  margin-top: 330px;
+  margin-left: 15px;
+  a {
+    color: #c75c41;
   }
 }

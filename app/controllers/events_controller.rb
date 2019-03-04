@@ -1,7 +1,6 @@
 class EventsController < ApplicationController
   def index
     @events = Event.where.not(latitude: nil, longitude: nil)
-
     if params[:search].present?
       ids = params[:search][:activity]
       @events = @events.where(activity_id: ids)
@@ -19,6 +18,7 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @host = @event.host
+    @upcoming_events = current_user.upcoming_events.where.not(active: false)
   end
 
   def destroy

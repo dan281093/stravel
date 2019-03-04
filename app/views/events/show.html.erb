@@ -15,11 +15,15 @@
       <p class="left-p"> <%= image_tag "icons/localisation.svg" %></p>
       <p class="center-p"><%= @event.address %></p>
     </div>
-      <div class="new-card">
-        <p class="left-p"> <%= image_tag "icons/calendar.svg" %></p>
-        <p class="center-p"><%= @event.date %></p>
-      </div>
+    <div class="new-card">
+      <p class="left-p"> <%= image_tag "icons/calendar.svg" %></p>
+      <p class="center-p"><%= @event.date.strftime('%d-%b-%Y') %></p>
     </div>
+    <div class="new-card">
+      <p class="left-p"> <%= image_tag "icons/time.svg" %></p>
+      <p class="center-p"><%= @event.time %></p>
+    </div>
+  </div>
 
 
   <div class="col-xs-12 card-center small-margin">
@@ -28,11 +32,17 @@
     </div>
     <% if current_user == @host %>
     <div class="small-margin">
-      <%= link_to "Manage Attendees", event_attendees_path(@event),  class: "add-button" %>
-      <%= link_to "Edit my Event", edit_event_path(@event),  class: "add-button" %>
+      <%= link_to "Manage Attendees", event_attendees_path(@event), class: "add-button" %>
+      <%= link_to "Edit my Event", edit_event_path(@event), class: "add-button" %>
       <%= link_to "Delete this Event", event_path(@event), method: :delete, class: "add-button" %>
       <% else %>
-      <%= link_to "Join this Event", event_attendees_path(@event), method: :post,  class: "add-button medium-margin" %>
+
+      <% if @upcoming_events.include?(@event) %>
+        <%= link_to "Dashboard", dashboards_path, class: "add-button medium-margin" %>
+      <% else  %>
+        <%= link_to "Join this Event", event_attendees_path(@event), method: :post, class: "add-button medium-margin" %>
+      <% end %>
+
     </div>
     <% end %>
   </div>
