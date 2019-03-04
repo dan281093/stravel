@@ -2,42 +2,34 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400i" rel="stylesheet">
 </head>
 <div class="container">
-  <h1 class="logo-stravel"> STRAVEL </h1>
-<h2 class="sign-up-form">Sign up</h2>
+  <h1 class="logo-stravel"> Sign Up </h1>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs signin-form col-xs-offset-2">
+  <div class="form-inputs signin-form">
     <%= f.input :first_name,
                 required: true,
-                autofocus: true,
-                input_html: { autocomplete: "Frist Name" }%>
+                autofocus: true %>
                 <%= f.input :last_name,
                 required: true,
-                autofocus: true,
-                input_html: { autocomplete: "Last Name" }%>
+                autofocus: true %>
     <%= f.input :email,
                 required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
+                autofocus: true %>
     <%= f.input :password,
                 required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
+                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
     <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+                required: true %>
     <%= f.input :photo,
-                required: true,
-                input_html: { autocomplete: "add-photo" }%>
+                required: true %>
     <%= f.input :description,
-                required: true,
-                input_html: { autocomplete: "Tell-us-about-yourself"} %>
+                required: true, input_html: { class: 'sign-up-description' } %>
     <%= f.input :birth_date,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "email", class: "time-picker" }%>
+                input_html: { class: "time-picker" }%>
   </div>
 
   <div class="form-actions button-signup">

@@ -27,6 +27,6 @@ class Users::ActivitiesController < ApplicationController
     ids_to_create.each { |id| UserActivity.create(user: current_user, activity_id: id) }
     current_user.user_activities.where(activity_id: ids_to_destroy).destroy_all
 
-    redirect_to edit_user_registration_path
+    redirect_to dashboards_path
   end
 end
