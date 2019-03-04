@@ -39,7 +39,7 @@ color: #fff;
     a {
       text-decoration: none;
       font-size: 16px;
-      color: black;
+      color: white;
     }
     p {
       font-size: 12px;
@@ -64,14 +64,24 @@ color: #fff;
 }
 
 .pending {
-  background-color: #FBD157;
+  .status {
+  background-color: #FBD157
+  }
 }
 
-.accepted {
+.card-dashboard.accepted {
+  .status{
   background-color: #B0DB72;
 }
-.declined{
+  border: 2px groove #B0DB72;
+}
+
+
+.declined {
+  .status{
   background-color: #F1829F;
+  }
+  border: 2px groove #F1829F;
 }
 
 .activity-date {
