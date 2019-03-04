@@ -27,7 +27,7 @@ users = [
     description: "Hi! I'm Adam. I'm 31 years old. I work as accountent and I love to go out and meet new people",
     password: '123456',
     birth_date: '1987-04-23',
-    remote_photo_url: "https://images.pexels.com/photos/713520/pexels-photo-713520.jpeg"
+    remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551692132/mryb6kbsgcp3594bwrhc.jpg"
   },
   {
   first_name: 'Ashley',
@@ -36,7 +36,7 @@ users = [
   description: "Hi! I'm Ashely. I just made Aliyah and can't wait to make friends and start my new life.",
   password: '123456',
   birth_date: '1996-10-15',
-  remote_photo_url: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg"
+  remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551692335/iyozkwhn0exam4pasjjv.jpg"
   },
   {
   first_name: 'Osher',
@@ -45,7 +45,7 @@ users = [
   description: "Hi! I'm new to the city! By day I'm a coder, but by night I'm lead guitarist in the Bloody Zebras",
   password: '123456',
   birth_date: '1995-10-15',
-  remote_photo_url: "https://images.pexels.com/photos/1211605/pexels-photo-1211605.jpeg"
+  remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551692267/jeh6cw5jxohoh9kdty5t.jpg"
   },
   {
     first_name: 'Eve',
@@ -54,7 +54,7 @@ users = [
     description: "Hi! I'm Eve I'm mixologist would loves to wind down girl afterwork. Low-key and drama free.",
     password: '123456',
     birth_date: '1990-12-18',
-    remote_photo_url: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg"
+    remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551692392/ema4dkvzzzxzvass5fbi.jpg"
   },
   {
     first_name: 'Chiam',
@@ -72,7 +72,7 @@ users = [
     description: "Hi! I'm Avi after a long day in advertizing I love to go out after dinner with my family.",
     password: '123456',
     birth_date: '1990-08-23',
-    remote_photo_url: "https://unsplash.com/photos/EwM1EqeIYzk"
+    remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551692132/mryb6kbsgcp3594bwrhc.jpg"
   },
   {
     first_name: 'Donald',
@@ -81,7 +81,7 @@ users = [
     description: "Hi! I'm Donald own a boat rental pier and give fun tours during the day. I'm always down for a night outdoors",
     password: '123456',
     birth_date: '1990-03-25',
-    remote_photo_url: "https://images.pexels.com/photos/1170807"
+    remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551692707/28335858_1738503206216640_5528359417228973702_o.jpg"
   }
 ]
 
