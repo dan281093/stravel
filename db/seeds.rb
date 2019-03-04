@@ -132,7 +132,7 @@ Event.create!(
   host: adam,
   address: 'Levinsky 39, Tel Aviv-Yafo',
   activity: party,
-  date: '2019-08-04',
+  date: '2019-03-08',
   time: '22:00'
 )
 
@@ -144,7 +144,7 @@ Event.create!(
   host: don,
   address: 'King George St 35, Tel Aviv-Yafo',
   activity: party,
-  date: '2019-08-04',
+  date: '2019-03-08',
   time: '21:00'
 )
 
@@ -157,7 +157,7 @@ Event.create!(
   host: don,
   address: 'HaYarkon St 19, Tel Aviv-Yafo',
   activity: beach,
-  date: '2019-08-04',
+  date: '2019-03-08',
   time: '19:00'
 )
 
@@ -170,7 +170,7 @@ Event.create!(
   host: don,
   address: 'Retsif Herbert Samuel St 58, Tel Aviv-Yafo',
   activity: beach,
-  date: '2019-08-04',
+  date: '2019-03-08',
   time: '18:00'
 )
 
@@ -182,7 +182,7 @@ Event.create!(
   host: don,
   address: 'Shlomo Lahat Promenade 17. Tel Aviv-Yafo',
   activity: lounge,
-  date: '2019-08-04',
+  date: '2019-03-08',
   time: '23:00'
 )
 
@@ -194,7 +194,7 @@ Event.create!(
   host: don,
   address: 'Retsif Herbert Samuel St 94, Tel Aviv-Yafo',
   activity: lounge,
-  date: '2019-08-04',
+  date: '2019-03-08',
   time: '22:00'
 )
 
@@ -207,7 +207,7 @@ Event.create!(
   host: don,
   address: 'Dizengoff St 50, Tel Aviv-Yafo',
   activity: shopping,
-  date: '2019-08-04',
+  date: '2019-03-08',
   time: '19:00'
 )
 
@@ -219,7 +219,7 @@ Event.create!(
   host: eve,
   address: 'Dizengoff St 50, Tel Aviv-Yafo',
   activity: cinema,
-  date: '2019-08-04',
+  date: '2019-03-08',
   time: '19:45'
 )
 
