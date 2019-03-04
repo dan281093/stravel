@@ -13,7 +13,7 @@
         <p class="small-margin"><%= event.address %></p>
         <div class="activity-date">
           <p><%= event.activity.name.upcase %></p>
-          <p><%= event.date %></p>
+          <p><%= event.date.strftime('%d-%b-%Y' %></p>
         </div>
           <div class="status"><%= event.attendee(current_user).status.capitalize %></div>
       <% end %>
@@ -32,7 +32,7 @@
           <p class="small-margin"><%= event.address %></p>
           <div class="activity-date">
             <p><%= event.activity.name.upcase %></p>
-            <p><%= event.date %></p>
+            <p><%= event.date.strftime('%d-%b-%Y' %></p>
           </div>
          <% end %>
        </div>
