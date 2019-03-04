@@ -26,8 +26,26 @@ users = [
     email: 'adam@test.com',
     description: "Hi! I'm Adam. I'm 31 years old. I work as accountent and I love to go out and meet new people",
     password: '123456',
-    birth_date: '1987-4-23',
-    remote_photo_url: "https://picsum.photos/200"
+    birth_date: '1987-04-23',
+    remote_photo_url: "https://images.pexels.com/photos/713520/pexels-photo-713520.jpeg"
+  },
+  {
+  first_name: 'Ashley',
+  last_name: 'Tremmel',
+  email: 'ashely@test.com',
+  description: "Hi! I'm Ashely. I just made Aliyah and can't wait to make friends and start my new life.",
+  password: '123456',
+  birth_date: '1996-10-15',
+  remote_photo_url: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg"
+  },
+  {
+  first_name: 'Osher',
+  last_name: 'Allen',
+  email: 'osher@test.com',
+  description: "Hi! I'm new to the city! By day I'm a coder, but by night I'm lead guitarist in the Bloody Zebras",
+  password: '123456',
+  birth_date: '1995-10-15',
+  remote_photo_url: "https://images.pexels.com/photos/1211605/pexels-photo-1211605.jpeg"
   },
   {
     first_name: 'Eve',
@@ -35,8 +53,26 @@ users = [
     email: 'eve@test.com',
     description: "Hi! I'm Eve I'm mixologist would loves to wind down girl afterwork. Low-key and drama free.",
     password: '123456',
-    birth_date: '1990-8-15',
-    remote_photo_url: "https://picsum.photos/200"
+    birth_date: '1990-12-18',
+    remote_photo_url: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg"
+  },
+  {
+    first_name: 'Chiam',
+    last_name: 'Trudel',
+    email: 'chiam@test.com',
+    description: "Hey, I'm fresh out of the army and I can't wait to make new friends and enjoy life",
+    password: '123456',
+    birth_date: '1997-04-15',
+    remote_photo_url: "https://drive.google.com/file/d/12E_wGdAsFtlStjhgsLQgpTkdTKnoCpgJ/view?usp=sharing"
+  },
+   {
+    first_name: 'Avi',
+    last_name: 'Flechmen',
+    email: 'avi@test.com',
+    description: "Hi! I'm Avi after a long day in advertizing I love to go out after dinner with my family.",
+    password: '123456',
+    birth_date: '1990-08-23',
+    remote_photo_url: "https://unsplash.com/photos/EwM1EqeIYzk"
   },
   {
     first_name: 'Donald',
@@ -44,8 +80,8 @@ users = [
     email: 'don@test.com',
     description: "Hi! I'm Donald own a boat rental pier and give fun tours during the day. I'm always down for a night outdoors",
     password: '123456',
-    birth_date: '1990-8-15',
-    remote_photo_url: "https://picsum.photos/200"
+    birth_date: '1990-03-25',
+    remote_photo_url: "https://images.pexels.com/photos/1170807"
   }
 ]
 
@@ -55,7 +91,10 @@ User.create!(users)
 adam = User.find_by(first_name: "Adam")
 don = User.find_by(first_name: "Donald")
 eve = User.find_by(first_name: "Eve")
-
+avi = User.find_by(first_name: "Avi")
+chiam = User.find_by(first_name: "Chiam")
+ashely = User.find_by(first_name: "Ashely")
+osher = User.find_by(first_name: "Osher")
 activities = [
   { name: 'Party' },
   { name: 'Bar' },
@@ -94,7 +133,7 @@ Event.create!(
   address: 'Levinsky 39, Tel Aviv-Yafo',
   activity: party,
   date: '2019-04-04',
-  time: '2:00'
+  time: '22:00'
 )
 
 Event.create!(
@@ -106,7 +145,7 @@ Event.create!(
   address: 'King George St 35, Tel Aviv-Yafo',
   activity: party,
   date: '2019-04-04',
-  time: '1:00'
+  time: '21:00'
 )
 
 Event.create!(
@@ -119,7 +158,7 @@ Event.create!(
   address: 'HaYarkon St 19, Tel Aviv-Yafo',
   activity: beach,
   date: '2019-04-04',
-  time: '1:00'
+  time: '19:00'
 )
 
 
@@ -132,7 +171,7 @@ Event.create!(
   address: 'Retsif Herbert Samuel St 58, Tel Aviv-Yafo',
   activity: beach,
   date: '2019-04-04',
-  time: '1:00'
+  time: '18:00'
 )
 
 Event.create!(
@@ -144,7 +183,7 @@ Event.create!(
   address: 'Shlomo Lahat Promenade 17. Tel Aviv-Yafo',
   activity: lounge,
   date: '2019-04-04',
-  time: '11:00'
+  time: '23:00'
 )
 
 Event.create!(
@@ -156,7 +195,7 @@ Event.create!(
   address: 'Retsif Herbert Samuel St 94, Tel Aviv-Yafo',
   activity: lounge,
   date: '2019-04-04',
-  time: '11:00'
+  time: '22:00'
 )
 
 Event.create!(
@@ -169,7 +208,7 @@ Event.create!(
   address: 'Dizengoff St 50, Tel Aviv-Yafo',
   activity: shopping,
   date: '2019-04-04',
-  time: '11:00'
+  time: '19:00'
 )
 
 Event.create!(
@@ -181,7 +220,7 @@ Event.create!(
   address: 'Dizengoff St 50, Tel Aviv-Yafo',
   activity: cinema,
   date: '2019-04-04',
-  time: '21:00'
+  time: '19:45'
 )
 
 event1 = Event.find_by(title: 'Night Out at Mondo 2000')
