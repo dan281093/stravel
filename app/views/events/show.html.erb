@@ -13,15 +13,15 @@
   <div class="row">
     <div class="new-card">
       <p class="left-p"> <%= image_tag "icons/localisation.svg" %></p>
-      <p class="center-p"><%= @event.address %></p>
+      <p class="left-p-show"><%= @event.address %></p>
     </div>
     <div class="new-card">
       <p class="left-p"> <%= image_tag "icons/calendar.svg" %></p>
-      <p class="center-p"><%= @event.date.strftime('%d-%b-%Y') %></p>
+      <p class="left-p-show"><%= @event.date.strftime('%d-%b-%Y') %></p>
     </div>
     <div class="new-card">
       <p class="left-p"> <%= image_tag "icons/time.svg" %></p>
-      <p class="center-p"><%= @event.time.strftime('%H:%M') %></p>
+      <p class="left-p-show"><%= @event.time.strftime('%H:%M') %></p>
     </div>
   </div>
 
@@ -38,9 +38,9 @@
       <% else %>
 
       <% if @upcoming_events.include?(@event) %>
-        <%= link_to "Dashboard", dashboards_path, class: "add-button medium-margin" %>
+        <%= link_to "Dashboard", dashboards_path, class: "add-button small-margin" %>
       <% else  %>
-        <%= link_to "Join this Event", event_attendees_path(@event), method: :post, class: "add-button medium-margin" %>
+        <%= link_to "Join this Event", event_attendees_path(@event), method: :post, class: "add-button small-margin" %>
       <% end %>
 
     </div>
