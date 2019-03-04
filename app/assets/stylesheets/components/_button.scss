@@ -176,9 +176,19 @@
 }
 
 .signinpage-buttonsignup {
-  margin-top: 330px;
+  margin-top: 185px;
   margin-left: 15px;
   a {
     color: #c75c41;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .signinpage-buttonsignup {
+  margin-top: 340px;
+  margin-left: 15px;
+  a {
+    color: #c75c41;
+  }
   }
 }
