@@ -63,7 +63,7 @@ users = [
     description: "Hey, I'm fresh out of the army and I can't wait to make new friends and enjoy life.",
     password: '123456',
     birth_date: '1997-04-15',
-    remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551692707/28335858_1738503206216640_5528359417228973702_o.jpg"
+    remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1550568210/imageedit_1_3230602212.gif"
   },
    {
     first_name: 'Avi',
@@ -72,7 +72,7 @@ users = [
     description: "Hi! I'm Avi after a long day in advertising I love to go out after dinner with my family.",
     password: '123456',
     birth_date: '1990-08-23',
-    remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551692132/mryb6kbsgcp3594bwrhc.jpg"
+    remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1550162292/ajtuhyqp64i3ljvsbe0w.png"
   },
   {
     first_name: 'Donald',
