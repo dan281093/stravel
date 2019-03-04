@@ -29,6 +29,14 @@ users = [
     birth_date: '1987-04-23',
     remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551692132/mryb6kbsgcp3594bwrhc.jpg"
   },
+  { first_name: 'Nickoma',
+  last_name: 'Ceaser',
+  email: 'nickomaceaser@gmail.com',
+  description: "Hey, my names Nickoma I from NYC and i made aliyah 3 years ago. I live in Gush Etzion and don't get out much, but I love  getting out and making the most of the night .",
+  password: '666666',
+  birth_date: '1984-12-18',
+  remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551697969/nickoma_avatar.jpg"
+  },
   {
   first_name: 'Ashley',
   last_name: 'Tremmel',
@@ -95,6 +103,7 @@ avi = User.find_by(first_name: "Avi")
 chiam = User.find_by(first_name: "Chiam")
 ashely = User.find_by(first_name: "Ashely")
 osher = User.find_by(first_name: "Osher")
+nick = User.find_by(first_name: "Nickoma")
 activities = [
   { name: 'Party' },
   { name: 'Bar' },
@@ -138,7 +147,7 @@ Event.create!(
 
 Event.create!(
   title: 'Silent trance party at Meir Garden',
-  description: "Come dance the night away at DJ Envy's Bluetooth Bash in the park. 50nis deposit for headphone rental.",
+  description: "Come dance the night away at DJ Envy's Bluetooth Bash in the park. 50 nis deposit for headphone rental.",
   latitude: 32.072774,
   longitude: 34.773843,
   host: don,
@@ -164,10 +173,10 @@ Event.create!(
 
 Event.create!(
   title: 'Jerusalem Beach Tiki Party',
-  description: "Lets take over the Beach with a impromt to Tiki Party. Will provide the grill and Tiki accesories. Dress in your favorite island wear.",
+  description: "Lets take over the Beach with a impromptu to Tiki Party. We'll provide the grill and Tiki accessories. Dress in your favorite island wear.",
   latitude: 32.073676,
   longitude: 34.764441,
-  host: don,
+  host: nick,
   address: 'Retsif Herbert Samuel St 58, Tel Aviv-Yafo',
   activity: beach,
   date: '2019-03-08',
@@ -176,7 +185,7 @@ Event.create!(
 
 Event.create!(
   title: 'Nagila and New Wave',
-  description: "Come check out our New Wave night at Raffikis Nagila and grill.",
+  description: "Come check out our New Wave night at Rafiki's Nagila and grill.",
   latitude: 32.080414,
   longitude: 34.767204,
   host: don,
