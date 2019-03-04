@@ -113,11 +113,13 @@
   display: flex;
   justify-content: space-around;
 }
-.inline-button{
+
+.inline-button {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .trashcan {
   margin-top: 15px;
   width: 100%;
@@ -125,10 +127,12 @@
   align-items: center;
   justify-content: center;
 }
+
 .description {
   color: #fff;
   text-align: center;
 }
+
 .title-attendee-name{
   text-align: center;
   font-weight: bolder;
