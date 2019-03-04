@@ -26,8 +26,9 @@
 .title-attendees {
   text-align: center;
   top: 40px;
-  font-weight: lighter;
+  font-weight: 600;
   font-size: 20px;
+  color: #fff;
 }
 
 .btn-decline {
@@ -57,7 +58,7 @@
   margin-top: 40px;
 }
 
-.status-decline{
+.status-decline {
   color: #F1829F;
   font-weight: bold;
   font-style: italic;
@@ -65,7 +66,7 @@
   text-align: center;
 }
 
-.status-approve{
+.status-approve {
   color:#B0DB72;
   font-weight: bold;
   font-style: italic;
@@ -116,4 +117,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.trashcan {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.description {
+  color: #fff;
+  text-align: center;
+}
+.title-attendee-name{
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 70px;
+  font-size: 30px;
+  color: #fff;
 }
