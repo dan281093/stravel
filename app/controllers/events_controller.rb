@@ -18,6 +18,7 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @host = @event.host
+    @upcoming_events = current_user.upcoming_events.where.not(active: false)
   end
 
   def destroy
