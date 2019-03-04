@@ -48,6 +48,10 @@ a:hover {
   color: white !important;
 }
 
+.attendees-managing {
+  display: flex;
+  justify-content: space-around;
+}
 
 .defined-status {
   opacity: 0.6;
