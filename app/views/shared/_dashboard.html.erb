@@ -6,24 +6,24 @@
   <% if @upcoming_events.empty? %>
     <p class="empty-message">You are not attending any events yet</p>
   <% else %>
-  <% @upcoming_events.each do |event| %>
-    <div class="card-dashboard <%= event.attendee(current_user).status %>">
-      <%= link_to event_path(event) do %>
-        <%= event.title %>
-        <p class="small-margin"><%= event.address %></p>
-        <div class="activity-date">
-          <p><%= event.activity.name.upcase %></p>
-          <p><%= event.date.strftime('%d-%b-%Y' %></p>
-        </div>
+    <% @upcoming_events.each do |event| %>
+      <div class="card-dashboard <%= event.attendee(current_user).status %>">
+        <%= link_to event_path(event) do %>
+          <%= event.title %>
+          <p class="small-margin"><%= event.address %></p>
+          <div class="activity-date">
+            <p><%= event.activity.name.upcase %></p>
+            <p><%= event.date.strftime('%d-%b-%Y') %></p>
+          </div>
           <div class="status"><%= event.attendee(current_user).status.capitalize %></div>
-      <% end %>
-    </div>
-  <% end %>
+        <% end %>
+      </div>
+    <% end %>
   <% end %>
 
   <h3 class="title-light-big">Events I am Hosting</h3>
   <% if @hosted_events.empty? %>
-  <p class="empty-message">You are not hosting any events yet</p>
+    <p class="empty-message">You are not hosting any events yet</p>
   <% else %>
     <% @hosted_events.each do |event| %>
       <div class="card-dashboard-hosting">
@@ -32,12 +32,12 @@
           <p class="small-margin"><%= event.address %></p>
           <div class="activity-date">
             <p><%= event.activity.name.upcase %></p>
-            <p><%= event.date.strftime('%d-%b-%Y' %></p>
+            <p><%= event.date.strftime('%d-%b-%Y') %></p>
           </div>
-         <% end %>
-       </div>
+        <% end %>
+      </div>
     <% end %>
-    <% end %>
+  <% end %>
 
     <div class="start-over">
       <%= link_to "Start Over", choose_path, class: "btn btn-primary button-event-signup" %>
