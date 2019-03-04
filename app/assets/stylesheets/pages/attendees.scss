@@ -133,10 +133,18 @@
   text-align: center;
 }
 
-.title-attendee-name{
+.title-attendee-name {
   text-align: center;
   font-weight: bolder;
   margin-top: 70px;
   font-size: 30px;
   color: #fff;
+}
+
+.message-empty-attendees {
+  text-align: center;
+  color: #FBEDE1;
+  position: relative;
+  margin-top: auto;
+  margin-bottom: 65px;
 }
