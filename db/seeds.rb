@@ -24,7 +24,7 @@ users = [
   { first_name: 'Adam',
     last_name: 'Black',
     email: 'adam@test.com',
-    description: "Hi! I'm Adam. I'm 31 years old. I work as accountent and I love to go out and meet new people",
+    description: "Hi! I'm Adam. I'm 31 years old. I work as accountant and I love to go out and meet new people.",
     password: '123456',
     birth_date: '1987-04-23',
     remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551692132/mryb6kbsgcp3594bwrhc.jpg"
@@ -32,8 +32,8 @@ users = [
   {
   first_name: 'Ashley',
   last_name: 'Tremmel',
-  email: 'ashely@test.com',
-  description: "Hi! I'm Ashely. I just made Aliyah and can't wait to make friends and start my new life.",
+  email: 'ashley@test.com',
+  description: "Hi! I'm Ashley. I just made Aliyah and can't wait to make friends and start my new life.",
   password: '123456',
   birth_date: '1996-10-15',
   remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551692335/iyozkwhn0exam4pasjjv.jpg"
@@ -51,7 +51,7 @@ users = [
     first_name: 'Eve',
     last_name: 'Mendona',
     email: 'eve@test.com',
-    description: "Hi! I'm Eve I'm mixologist would loves to wind down girl afterwork. Low-key and drama free.",
+    description: "Hi! I'm Eve I'm mixologist would love to wind down girl after work. Low-key and drama free.",
     password: '123456',
     birth_date: '1990-12-18',
     remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551692392/ema4dkvzzzxzvass5fbi.jpg"
@@ -60,7 +60,7 @@ users = [
     first_name: 'Chiam',
     last_name: 'Trudel',
     email: 'chiam@test.com',
-    description: "Hey, I'm fresh out of the army and I can't wait to make new friends and enjoy life",
+    description: "Hey, I'm fresh out of the army and I can't wait to make new friends and enjoy life.",
     password: '123456',
     birth_date: '1997-04-15',
     remote_photo_url: "https://drive.google.com/file/d/12E_wGdAsFtlStjhgsLQgpTkdTKnoCpgJ/view?usp=sharing"
@@ -69,7 +69,7 @@ users = [
     first_name: 'Avi',
     last_name: 'Flechmen',
     email: 'avi@test.com',
-    description: "Hi! I'm Avi after a long day in advertizing I love to go out after dinner with my family.",
+    description: "Hi! I'm Avi after a long day in advertising I love to go out after dinner with my family.",
     password: '123456',
     birth_date: '1990-08-23',
     remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551692132/mryb6kbsgcp3594bwrhc.jpg"
