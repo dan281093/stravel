@@ -22,6 +22,7 @@ form {
 
     input {
       display: none;
+      margin-bottom: 30px;
     }
 
     label {
@@ -136,7 +137,7 @@ form {
   width: 60vw;
   input {
     margin-top: 10px;
-    margin-bottom: 4px;
+    margin-bottom: 15px;
     width: 50vw;
   }
   select {
@@ -174,5 +175,11 @@ form {
 .file.required {
   input {
     background-color: white;
+  }
+}
+
+.sign-up-description {
+  textarea {
+    resize: none;
   }
 }
