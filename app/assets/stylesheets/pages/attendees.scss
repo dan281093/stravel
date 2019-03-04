@@ -38,10 +38,19 @@
   padding: 3px 18px;
   border-radius: 50px;
   font-weight: lighter;
-  opacity: 0.6;
   transition: opacity 0.3s ease;
   margin: 5px;
   text-align: center;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+
+.defined-status {
+  opacity: 0.6;
 }
 
 .btn-approve {
@@ -51,11 +60,13 @@
   padding: 3px 18px;
   border-radius: 50px;
   font-weight: lighter;
-  opacity: 0.6;
   transition: opacity 0.3s ease;
   margin: 2px;
   text-align: center;
-  margin-top: 40px;
+  a:active {
+    text-decoration: none !important;
+    color: white !important;
+  }
 }
 
 .status-decline {
