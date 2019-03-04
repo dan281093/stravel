@@ -30,30 +30,30 @@ users = [
     remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551692132/mryb6kbsgcp3594bwrhc.jpg"
   },
   { first_name: 'Nickoma',
-  last_name: 'Ceaser',
-  email: 'nickomaceaser@gmail.com',
-  description: "Hey, my names Nickoma I from NYC and i made aliyah 3 years ago. I live in Gush Etzion and don't get out much, but I love  getting out and making the most of the night .",
-  password: '666666',
-  birth_date: '1984-12-18',
-  remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551697969/nickoma_avatar.jpg"
+    last_name: 'Ceaser',
+    email: 'nickomaceaser@gmail.com',
+    description: "Hey, my names Nickoma I from NYC and i made aliyah 3 years ago. I live in Gush Etzion and don't get out much, but I love  getting out and making the most of the night .",
+    password: '666666',
+    birth_date: '1984-12-18',
+    remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551697969/nickoma_avatar.jpg"
   },
   {
-  first_name: 'Ashley',
-  last_name: 'Tremmel',
-  email: 'ashley@test.com',
-  description: "Hi! I'm Ashley. I just made Aliyah and can't wait to make friends and start my new life.",
-  password: '123456',
-  birth_date: '1996-10-15',
-  remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551692335/iyozkwhn0exam4pasjjv.jpg"
+    first_name: 'Ashley',
+    last_name: 'Tremmel',
+    email: 'ashley@test.com',
+    description: "Hi! I'm Ashley. I just made Aliyah and can't wait to make friends and start my new life.",
+    password: '123456',
+    birth_date: '1996-10-15',
+    remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551692335/iyozkwhn0exam4pasjjv.jpg"
   },
   {
-  first_name: 'Osher',
-  last_name: 'Allen',
-  email: 'osher@test.com',
-  description: "Hi! I'm new to the city! By day I'm a coder, but by night I'm lead guitarist in the Bloody Zebras",
-  password: '123456',
-  birth_date: '1995-10-15',
-  remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551692267/jeh6cw5jxohoh9kdty5t.jpg"
+    first_name: 'Osher',
+    last_name: 'Allen',
+    email: 'osher@test.com',
+    description: "Hi! I'm new to the city! By day I'm a coder, but by night I'm lead guitarist in the Bloody Zebras",
+    password: '123456',
+    birth_date: '1995-10-15',
+    remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551692267/jeh6cw5jxohoh9kdty5t.jpg"
   },
   {
     first_name: 'Eve',
@@ -122,13 +122,6 @@ beach = Activity.find_by(name: 'Beach')
 lounge = Activity.find_by(name: 'Lounge')
 shopping = Activity.find_by(name: 'Shopping')
 cinema = Activity.find_by(name: 'Cinema')
-
-interests = [
-  { name: 'Upscale', category: 'Bar' },
-  { name: 'Live Bars', category: 'Bar' },
-  { name: 'Electro', category: 'Party' },
-  { name: 'Festivals', category: 'Party' }
-]
 
 puts 'I am creating events now!'
 
