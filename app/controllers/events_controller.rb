@@ -1,7 +1,6 @@
 class EventsController < ApplicationController
   def index
     @events = Event.where.not(latitude: nil, longitude: nil)
-
     if params[:search].present?
       ids = params[:search][:activity]
       @events = @events.where(activity_id: ids)

@@ -113,7 +113,7 @@
     border-radius: 15px;
     transition: 0.4s ease;
     width: 150px;
-  }
+}
 
 .button-join:hover {
   background-color: #FBD157 ;
@@ -126,17 +126,18 @@
   border-color:#ED9153 !important;
   border: solid 0.5px;
 }
-  .small-margin {
-    margin-top: 30px;
-  }
 
-  .medium-margin {
+.small-margin {
+  margin-top: 30px;
+}
+
+.medium-margin {
     margin-top: 60px !important;
   }
 
-  .big-margin {
-    margin-top: 150px !important;
-  }
+.big-margin {
+  margin-top: 150px !important;
+}
 
 .apply-button {
   background-color: #ED9153;
