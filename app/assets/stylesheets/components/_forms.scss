@@ -98,6 +98,15 @@ form {
   }
 }
 
+.login-button {
+  display: flex;
+  justify-content: center;
+  a {
+    display: flex;
+  justify-content: center;
+  }
+}
+
 .hint {
   color: red;
 }
