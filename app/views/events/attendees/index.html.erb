@@ -9,11 +9,12 @@
   <% else %>
   <h3 class="title-attendees">The following people are interested in your events!</h3>
     <% @attendees.each do |attendee| %>
-    <%= link_to event_attendee_path(@event, attendee) do %>
-        <div class="card-dashboard <%= attendee.status %> attendees-managing">
+      <div class="card-dashboard <%= attendee.status %> attendees-managing">
+        <%= link_to event_attendee_path(@event, attendee) do %>
           <%= image_tag avatar_url(attendee.user), class: 'card-avatar-show' %>
           <h2 class="small-text"><%= "#{attendee.user.first_name} #{attendee.user.last_name}, #{((Time.zone.now - attendee.user.birth_date.to_time) / 1.year.seconds).floor}" %></h2>
-        </div>
+          <div class="status"><%= attendee.status.capitalize %></div>
+      </div>
       <% end %>
     <% end %>
     </div>
