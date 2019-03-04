@@ -9,6 +9,7 @@ form {
     max-width: 350px;
     margin: 0 auto;
   }
+}
 
   .radio.btn,
   .checkbox.btn {
@@ -62,8 +63,17 @@ form {
 
 .form-space {
   padding: 15px;
+
+  abbr {
+    display: none;
+  }
 }
 
+.form-inputs {
+  abbr {
+    display: none;
+  }
+}
 .form-inputs input {
   display: flex;
 }
@@ -125,5 +135,5 @@ form {
     width: 25px;
     margin-left: -3px;
     }
-  }
 }
+
