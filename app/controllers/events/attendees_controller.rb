@@ -31,4 +31,11 @@ class Events::AttendeesController < ApplicationController
       render :show
     end
   end
+
+  def destroy
+    @event = Event.find(params[:event_id])
+    @attendee = @event.attendee(current_user)
+    @attendee.destroy
+    redirect_to dashboards_path
+  end
 end
