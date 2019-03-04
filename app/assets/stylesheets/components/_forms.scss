@@ -73,9 +73,25 @@ form {
   abbr {
     display: none;
   }
+  p, h4 {
+    color: white;
+  }
+
+  a {
+    color: #FF5959;
+  }
+
+  label {
+    margin-bottom: 8px;
+  }
+
+  h2 {
+    margin-bottom: 15px;
+  }
 }
 .form-inputs input {
   display: flex;
+  margin-bottom: 25px;
 }
 
 .form-inputs textarea {
@@ -111,7 +127,7 @@ form {
   color: red;
 }
 
-.time-picker {
+.time-picker, #user_birth_date_1i, #user_birth_date_2i, #user_birth_date_3i, .upload-picture {
     color: black !important;
     background: white !important;
 }
@@ -146,3 +162,11 @@ form {
     }
 }
 
+.btn-update {
+  margin-top: 24px ;
+}
+
+.input.date.required.user_birth_date.field_without_errors {
+    margin-top: 15px;
+    margin-right: 10px;
+}

@@ -1,57 +1,53 @@
 <h2 style="text-align: center;"><%= current_user.first_name.to_s.humanize %> <%= current_user.last_name.to_s.humanize %> let's edit your account </h2>
-
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), class: "form-user-wrapper", html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+<%= f.error_notification %>
+<div class="container">
+  <div class="row">
+    <div class="form-inputs col-xs-12 col-md-3 space-sm-4 edit-page">
+      <%= f.input :email, required: true, autofocus: true %>
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
-
-    <%= f.input :first_name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "Frist Name" }%>
-    <%= f.input :last_name,
-                required: true,
-                input_html: { autocomplete: "Last Name" }%>
-    <%= f.input :password,
-                hint: "Leave it blank if you don't want to change it",
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :current_password,
-                hint: "We need your current password to confirm your changes",
-                required: true,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :photo,
-                required: true,
-                input_html: { autocomplete: "add_photo" }%>
-    <%= f.input :description,
-                required: true,
-                input_html: { autocomplete: "Tell-us-about-yourself"} %>
-    <%= f.input :birth_date,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "Date of birth: " }%>
+      <% end %>
+      <%= f.input :first_name,
+      required: true,
+      autofocus: true,
+      input_html: { autocomplete: "Frist Name" }%>
+      <%= f.input :last_name,
+      required: true,
+      input_html: { autocomplete: "Last Name" }%>
+      <%= f.input :password,
+      hint: "Leave it blank if you don't want to change it",
+      required: false,
+      input_html: { autocomplete: "new-password" } %>
+      <%= f.input :password_confirmation,
+      required: false,
+      input_html: { autocomplete: "new-password" } %>
+      <%= f.input :current_password,
+      hint: "We need your current password to confirm your changes",
+      required: true,
+      input_html: { autocomplete: "current-password" } %>
+      <%= f.input :photo,
+      required: true,
+      input_html: { autocomplete: "add_photo",  class: "upload-picture" }%>
+      <%= f.input :description,
+      required: true,
+      input_html: { autocomplete: "Tell-us-about-yourself"} %>
+      <%= f.input :birth_date,
+      required: true,
+      autofocus: true,
+      input_html: { autocomplete: "Date of birth: "}%>
+      <%= link_to "Edit my activities", bulk_edit_user_activities_path %>
+      <h4 class="cancel">Cancel my account</h4>
+      <p class="cancel">Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+      <div class="form-actions">
+        <ul class="pager">
+          <li>
+            <%= f.button :submit, "Update", class: "btn-update" %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 
-
-<%= link_to "Edit my activities", bulk_edit_user_activities_path %>
-
-<h4 class="cancel">Cancel my account</h4>
-
-<p class="cancel">Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
- <div class="form-actions">
-<ul class="pager">
-  <li>
-    <%= f.button :submit, "Update" %>
-  <% end %>
-</li>
-  <li><%= link_to "Back", :back %></li>
-</ul>
 </div>
