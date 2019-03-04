@@ -63,7 +63,7 @@ users = [
     description: "Hey, I'm fresh out of the army and I can't wait to make new friends and enjoy life.",
     password: '123456',
     birth_date: '1997-04-15',
-    remote_photo_url: "https://drive.google.com/file/d/12E_wGdAsFtlStjhgsLQgpTkdTKnoCpgJ/view?usp=sharing"
+    remote_photo_url: "https://res.cloudinary.com/dzgpovo2n/image/upload/v1551692707/28335858_1738503206216640_5528359417228973702_o.jpg"
   },
    {
     first_name: 'Avi',
