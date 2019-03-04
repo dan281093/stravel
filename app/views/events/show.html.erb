@@ -39,6 +39,7 @@
 
       <% if @upcoming_events.include?(@event) %>
         <%= link_to "Dashboard", dashboards_path, class: "add-button small-margin" %>
+        <%= link_to "Cancel", event_attendee_path(@event, current_user), class: "add-button", method: :delete %>
       <% else  %>
 
           <button type="button" class="add-button" data-toggle="modal" data-target="#exampleModalCenter">
@@ -59,7 +60,7 @@
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <%= link_to event_attendees_path(@event), method: :post do %>
-              <button type="button" class="add-button">Confirm Event</button>
+              <button type="button" class="add-button small-margin">Confirm Event</button>
         <% end %>
             </div>
           </div>

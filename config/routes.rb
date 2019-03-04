@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   resources :events, only: [:index, :show, :update, :destroy]
   resources :events do
     resources :design, controller: 'events/design'
-    resources :attendees, only: [:index, :show, :create, :update], controller: 'events/attendees'
+    resources :attendees, only: [:index, :show, :create, :update, :destroy], controller: 'events/attendees'
     # resource :search, controller: 'events/search'
   end
 
