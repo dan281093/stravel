@@ -32,7 +32,7 @@ color: #fff;
 .card-dashboard {
   border: 2px groove #FBD157;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  padding: 10px 50px;
+  padding: 10px 30px;
   text-align: center;
   position: relative;
   margin-top: 25px;
@@ -42,7 +42,7 @@ color: #fff;
       color: white;
     }
     p {
-      font-size: 12px;
+      font-size: 16px;
     }
 }
 
@@ -56,7 +56,7 @@ color: #fff;
     a {
       text-decoration: none;
       font-size: 16px;
-      color: #FBEDE1;
+      color: white;
     }
     p {
 
@@ -98,7 +98,7 @@ color: #fff;
 .activity-date {
   display: flex;
   justify-content: space-between;
-  color: #FBEDE1;
+  color: white;
 }
 
 .event-name {
