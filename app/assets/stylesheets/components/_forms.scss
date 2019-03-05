@@ -68,6 +68,11 @@ form {
   abbr {
     display: none;
   }
+  input {
+    background-color: transparent;
+    border: none;
+    opacity: 1;
+  }
 }
 
 .form-inputs {
