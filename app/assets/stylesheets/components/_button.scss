@@ -114,6 +114,13 @@
     width: 150px;
 }
 
+.button-join {
+  input {
+      background-color: #ED9153;
+      border: none;
+    }
+}
+
 .button-join:hover {
   background-color: #FBD157 ;
   border-color:#ED9153;
