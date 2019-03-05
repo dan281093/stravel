@@ -7,6 +7,9 @@ class Users::ActivitiesController < ApplicationController
 
   def create
     ids = params.dig(:user, :activity_ids)
+
+    redirect_to choose_path and return unless ids
+
     ids.each { |id| UserActivity.create(user: current_user, activity_id: id) }
 
     redirect_to choose_path
@@ -18,8 +21,11 @@ class Users::ActivitiesController < ApplicationController
   end
 
   def update
-    new_ids = params.dig(:user, :activity_ids).map(&:to_i)
+
+    new_ids = params.dig(:user, :activity_ids).try(:map) { |id| id.to_i }
     old_ids = current_user.activities.pluck(:id)
+
+    redirect_to choose_path and return unless new_ids && old_ids
 
     ids_to_create = new_ids.reject { |id| old_ids.include? id }
     ids_to_destroy = old_ids.reject { |id| new_ids.include? id }
