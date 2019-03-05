@@ -10,7 +10,9 @@
   <h3 class="title-attendees">Event Interests</h3>
   <div class="row attendee-hobbies">
     <% if @attendee.user.activities.empty?  %>
-    <p class="no-interest">This user doesn't seem to have any interests for now</p>
+      <div  class="no-interest">
+       <p>This user doesn't seem to have any interests for now</p>
+      </div>
     <% else %>
     <div class="wrapper-interests">
       <div class="row">
