@@ -69,6 +69,10 @@ color: #fff;
   }
 }
 
+.pending.status {
+  background-color: #FBD157
+}
+
 .card-dashboard.accepted {
   .status{
   background-color: #B0DB72;
@@ -76,12 +80,19 @@ color: #fff;
   border: 2px groove #B0DB72;
 }
 
+.accepted.status {
+  background-color: #B0DB72;
+}
 
 .declined {
   .status{
   background-color: #F1829F;
   }
   border: 2px groove #F1829F;
+}
+
+.declined.status {
+  background-color: #F1829F;
 }
 
 .activity-date {
