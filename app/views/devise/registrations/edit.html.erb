@@ -40,12 +40,8 @@
       <h4 class="cancel">Cancel my account</h4>
       <p class="cancel">Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
       <div class="form-actions">
-        <ul class="pager">
-          <li>
             <%= f.button :submit, "Update", class: "btn-update" %>
             <% end %>
-          </li>
-        </ul>
       </div>
     </div>
   </div>
