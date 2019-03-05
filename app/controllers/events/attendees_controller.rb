@@ -36,6 +36,6 @@ class Events::AttendeesController < ApplicationController
     @event = Event.find(params[:event_id])
     @attendee = @event.attendee(current_user)
     @attendee.destroy
-    redirect_to dashboards_path
+    redirect_to events_path
   end
 end
