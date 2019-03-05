@@ -21,7 +21,7 @@
       <h3 class="small-margin h3-choose" style="text-align: center;">Unfortunately no events found!</h3>
       <% else %>
       <% @events.each do |event| %>
-        <div class="card-events-show">
+        <div id="event-<%= event.id %>" class="card-events-show">
           <%= link_to event_path(event) do %>
             <div class="card-center">
                 <div class="card">

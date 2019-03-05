@@ -10,9 +10,11 @@ class EventsController < ApplicationController
       {
         lng: event.longitude,
         lat: event.latitude,
-        infoWindow: "#{event.title}"
+        infoWindow: "#{event.title}",
+        image_url: helpers.asset_url('stravel-pin.png'),
+        eventId: event.id
       }
-    end
+   end
   end
 
   def show
