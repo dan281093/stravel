@@ -21,8 +21,6 @@ Rails.application.routes.draw do
   end
 
 
-
-
   # resources :attendees, only: [:index, :show]
   resources :dashboards, only: [:index]
   resources :events, only: [:index, :show, :update, :destroy]
