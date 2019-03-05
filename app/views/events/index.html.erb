@@ -34,6 +34,11 @@
               <p class="event-details"><%= event.activity.name.upcase %></p>
               <p class="event-details"><%= event.date.strftime('%d-%b-%Y') %></p>
             </div>
+            <% if event.host == current_user %>
+              <div class="status-host">I'm the Host</div>
+            <% elsif !event.attendees.empty? && event.attendee(current_user).status != "pending" %>
+                <div class="status <%= event.attendee(current_user).status %>"><%= event.attendee(current_user).status.capitalize %></div>
+            <% end %>
         </div>
       <% end %>
     </div>
