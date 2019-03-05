@@ -77,4 +77,10 @@ font-size: 35px;
   text-align: left;
   color: #FBEDE1;
   margin-top: auto;
+  a {
+    color: #FBEDE1;
+  }
+  &:hover {
+    text-decoration: none;
+  }
 }

@@ -13,7 +13,7 @@
   <div class="row">
     <div class="new-card">
       <p class="left-p"> <%= image_tag "icons/localisation.svg" %></p>
-      <p class="left-p-show"><%= @event.address %></p>
+      <p class="left-p-show"> <%= link_to @event.address, ('https://www.google.com/maps/search/?api=1''&query='+@event.latitude.to_s+','+@event.longitude.to_s) %></p>
     </div>
     <div class="new-card">
       <p class="left-p"> <%= image_tag "icons/calendar.svg" %></p>
