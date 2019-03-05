@@ -5,7 +5,8 @@ class RegistrationsController < Devise::RegistrationsController
     new_user_activity_path
   end
 
-   def configure_permitted_parameters
+  def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:birth_date, :photo, :description, :first_name, :last_name])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:birth_date, :photo, :description, :first_name, :last_name])
   end
 end
