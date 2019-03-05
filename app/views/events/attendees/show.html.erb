@@ -9,28 +9,34 @@
   <p class="description"><%= @attendee.user.description %></p>
   <h3 class="title-attendees">Event Interests</h3>
   <div class="row attendee-hobbies">
-    <% unless @attendee.user.activities.empty?  %>
-      <% @attendee.user.user_activities do |activity|  %>
-        <p class="btn-test"><%= @attendee.user.user_activities.activity.name %></p>
-      <% end %>
+    <% if @attendee.user.activities.empty?  %>
+    <p class="no-interest">This user doesn't seem to have any interests for now</p>
+    <% else %>
+    <div class="wrapper-interests">
+      <div class="row">
+        <% @attendee.user.activities.each do |activity|  %>
+        <div class="col-sm-6 col-xs-6">
+          <p class="btn-test"><%= activity.name %></p>
+        </div>
+        <% end %>
+      </div>
+    </div>
     <% end %>
   </div>
   <% if @attendee.status == 'pending' %>
-    <div class="inline-button">
-      <%= link_to "Accept", event_attendee_path(@event, @attendee, query: "Accept"), method: :patch, class: 'btn-approve' %>
-      <%= link_to "Decline", event_attendee_path(@event, @attendee, query:"Decline"), method: :patch, class: 'btn-decline' %>
-    </div>
+  <div class="inline-button">
+    <%= link_to "Accept", event_attendee_path(@event, @attendee, query: "Accept"), method: :patch, class: 'btn-approve' %>
+    <%= link_to "Decline", event_attendee_path(@event, @attendee, query:"Decline"), method: :patch, class: 'btn-decline' %>
+  </div>
   <% elsif @attendee.status == 'accepted' %>
-    <div class="inline-button">
-      <div class='btn-approve defined-status'><%= @attendee.status.capitalize %></div>
-      <%= link_to "Decline", event_attendee_path(@event, @attendee, query:"Decline"), method: :patch, class: 'btn-decline' %>
-    </div>
+  <div class="inline-button">
+    <div class='btn-approve defined-status'><%= @attendee.status.capitalize %></div>
+    <%= link_to "Decline", event_attendee_path(@event, @attendee, query:"Decline"), method: :patch, class: 'btn-decline' %>
+  </div>
   <% else %>
-    <div class="inline-button">
-      <%= link_to "Accept", event_attendee_path(@event, @attendee, query: "Accept"), method: :patch, class: 'btn-approve' %>
-      <div class="btn-decline defined-status"><%= @attendee.status.capitalize %></div>
-    </div>
+  <div class="inline-button">
+    <%= link_to "Accept", event_attendee_path(@event, @attendee, query: "Accept"), method: :patch, class: 'btn-approve' %>
+    <div class="btn-decline defined-status"><%= @attendee.status.capitalize %></div>
+  </div>
   <% end %>
 </div>
-
-
