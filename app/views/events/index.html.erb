@@ -36,7 +36,7 @@
             </div>
             <% if event.host == current_user %>
               <div class="status-host">I'm the Host</div>
-            <% elsif event.attendees.any? && event.attendee(current_user).try(:pending?) %>
+            <% elsif event.attendees.any? && event.attendee(current_user).try(:pending?) || event.attendee(current_user).try(:declined?) || event.attendee(current_user).try(:accepted?) %>
                 <div class="status <%= event.attendee(current_user).status %>"><%= event.attendee(current_user).status.capitalize %></div>
             <% end %>
         </div>
