@@ -159,8 +159,8 @@ Event.create!(
   host: don,
   address: 'HaYarkon St 19, Tel Aviv-Yafo',
   activity: beach,
-  date: '2019-03-08',
-  time: '19:00'
+  date: '2019-03-09',
+  time: '12:00'
 )
 
 
@@ -172,8 +172,8 @@ Event.create!(
   host: nick,
   address: 'Retsif Herbert Samuel 55, Tel Aviv-Yafo',
   activity: beach,
-  date: '2019-03-08',
-  time: '18:00'
+  date: '2019-03-09',
+  time: '13:00'
 )
 
 Event.create!(
@@ -185,7 +185,7 @@ Event.create!(
   address: 'Shlomo Lahat Promenade 17, Tel Aviv-Yafo',
   activity: lounge,
   date: '2019-03-08',
-  time: '23:00'
+  time: '22:00'
 )
 
 Event.create!(
@@ -197,7 +197,7 @@ Event.create!(
   address: 'Retsif Herbert Samuel St 94, Tel Aviv-Yafo',
   activity: lounge,
   date: '2019-03-08',
-  time: '22:00'
+  time: '21:00'
 )
 
 Event.create!(
@@ -209,7 +209,7 @@ Event.create!(
   host: don,
   address: 'Dizengoff St 50, Tel Aviv-Yafo',
   activity: shopping,
-  date: '2019-03-08',
+  date: '2019-03-07',
   time: '19:00'
 )
 
@@ -222,7 +222,7 @@ Event.create!(
   address: 'Ben Ami St 16, Tel Aviv-Yafo',
   activity: cinema,
   date: '2019-03-08',
-  time: '19:45'
+  time: '10:45'
 )
 
 event1 = Event.find_by(title: 'Night Out at Mondo 2000')
