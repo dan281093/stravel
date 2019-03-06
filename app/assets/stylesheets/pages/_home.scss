@@ -1,9 +1,15 @@
 .container-home {
-  height: 100vh;
+  height: 120vh;
   background-image: asset-url('image.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+@media only screen and (max-width: 720px) {
+  .container-home {
+    height: 100vh;
+  }
 }
 
 h2 {
