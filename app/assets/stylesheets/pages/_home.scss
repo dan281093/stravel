@@ -1,16 +1,46 @@
 .container-home {
-  height: 120vh;
+  height: 100vh;
   background-image: asset-url('image.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (min-width: 310px) and (max-width: 350px){
   .container-home {
-    height: 100vh;
+    height: 120vh;
   }
 }
+
+@media only screen and (min-width: 720px){
+  .container-home {
+    height: 130vh;
+  }
+}
+@media only screen and (max-width: 300px) and (min-width: 100px) {
+  .container-home {
+    height: 170vh;
+  }
+}
+
+@media only screen and (max-width: 322px) and (min-width: 319px) {
+  .container-home {
+    height: 135vh;
+  }
+}
+
+@media only screen and (max-width: 368px) and (min-width: 360px) {
+  .container-home {
+    height: 115vh;
+  }
+}
+
+@media only screen and (max-width: 380px) and (min-width: 374px) {
+  .container-home {
+    height: 110vh;
+  }
+}
+
 
 h2 {
     color: #FBEDE1;
