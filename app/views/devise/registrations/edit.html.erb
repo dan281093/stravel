@@ -33,6 +33,8 @@
       required: true,
       input_html: { autocomplete: "Tell-us-about-yourself"} %>
       <%= f.input :birth_date,
+      start_year: Time.now.year - 80,
+      end_year: Time.now.year - 18
       required: true,
       autofocus: true,
       input_html: { autocomplete: "Date of birth: "}%>

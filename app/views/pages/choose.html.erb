@@ -5,16 +5,8 @@
         <%= link_to "Join Event", events_search_path, class: "btn btn-primary button-join", method: :get %>
       </div>
       <h3 class="text-center or">or</h3>
-        <% if current_user.photo.present? %>
       <div class="text-center small-margin">
           <%= link_to "Create Event", events_path, class: "btn btn-primary button-create", method: :post %>
       </div>
-          <% else %>
-          <div class="wrapper-warning-big">
-            <div class="wrapper-warning">
-             <%= link_to "Add a profile picture to create an event", edit_user_registration_path, class: "warning-picture"%>
-             </div>
-         </div>
-        <% end %>
     </div>
   </div>
