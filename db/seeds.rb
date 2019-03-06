@@ -129,8 +129,8 @@ Event.create!(
   title: 'Night Out at Mondo 2000',
   description: "Mondo 2000 hosts awesome Saturday Night parties as well as theme nights and is always better in a group.
   ",
-  latitude: 31.7811283,
-  longitude: 35.2157765,
+  latitude: 32.059908,
+  longitude: 34.771582,
   host: adam,
   address: 'Levinsky 39, Tel Aviv-Yafo',
   activity: party,
@@ -141,8 +141,8 @@ Event.create!(
 Event.create!(
   title: 'Silent trance party at Meir Garden',
   description: "Come dance the night away at DJ Envy's Bluetooth Bash in the park. 50 nis deposit for headphone rental.",
-  latitude: 32.072774,
-  longitude: 34.773843,
+  latitude: 32.073194,
+  longitude: 34.773230,
   host: don,
   address: 'King George St 35, Tel Aviv-Yafo',
   activity: party,
@@ -154,8 +154,8 @@ Event.create!(
   title: 'Casual Beach Hangout',
   description: "Let's all meet at Banana Beach for some volleyball, BBQ
   and a drinks till dawn.",
-  latitude: 32.0696247,
-  longitude: 34.7630231,
+  latitude: 32.0703713,
+  longitude: 34.7633545,
   host: don,
   address: 'HaYarkon St 19, Tel Aviv-Yafo',
   activity: beach,
@@ -167,10 +167,10 @@ Event.create!(
 Event.create!(
   title: 'Jerusalem Beach Tiki Party',
   description: "Lets take over the Beach with a impromptu to Tiki Party. We'll provide the grill and Tiki accessories. Dress in your favorite island wear.",
-  latitude: 32.073676,
-  longitude: 34.764441,
+  latitude: 32.0734078,
+  longitude: 34.7644656,
   host: nick,
-  address: 'Retsif Herbert Samuel St 58, Tel Aviv-Yafo',
+  address: 'Retsif Herbert Samuel 55, Tel Aviv-Yafo',
   activity: beach,
   date: '2019-03-08',
   time: '18:00'
@@ -179,10 +179,10 @@ Event.create!(
 Event.create!(
   title: 'Nagila and New Wave',
   description: "Come check out our New Wave night at Rafiki's Nagila and grill.",
-  latitude: 32.080414,
-  longitude: 34.767204,
+  latitude: 32.0817312,
+  longitude: 34.7654149,
   host: don,
-  address: 'Shlomo Lahat Promenade 17. Tel Aviv-Yafo',
+  address: 'Shlomo Lahat Promenade 17, Tel Aviv-Yafo',
   activity: lounge,
   date: '2019-03-08',
   time: '23:00'
@@ -191,8 +191,8 @@ Event.create!(
 Event.create!(
   title: 'Best of Blues Tribute',
   description: "Come check out the best blues artist in Tel Aviv covering their favorite songs.",
-  latitude: 32.077523,
-  longitude: 34.766293,
+  latitude: 32.0773949,
+  longitude: 34.7645067,
   host: don,
   address: 'Retsif Herbert Samuel St 94, Tel Aviv-Yafo',
   activity: lounge,
@@ -204,8 +204,8 @@ Event.create!(
   title: 'Shopping at Dizengoff Mall',
   description: "Who wants to go shopping? I always have issues picking what fits.
   Anyone wants to join me?",
-  latitude: 32.0754357,
-  longitude: 34.7757615,
+  latitude: 32.0750269,
+  longitude: 34.7727508,
   host: don,
   address: 'Dizengoff St 50, Tel Aviv-Yafo',
   activity: shopping,
@@ -216,10 +216,10 @@ Event.create!(
 Event.create!(
   title: 'A Star is Born',
   description: "Who wants to check out the Master of Horror marathon on the big screen. ",
-  latitude: 32.0843995,
-  longitude: 34.774258,
+  latitude: 32.0753731,
+  longitude: 34.76664,
   host: eve,
-  address: 'Dizengoff St 50, Tel Aviv-Yafo',
+  address: 'Ben Ami St 16, Tel Aviv-Yafo',
   activity: cinema,
   date: '2019-03-08',
   time: '19:45'
